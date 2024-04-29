@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        applicationId "com.financeflow"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 45
+        versionName "1.44"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    repositories {
+        maven { url 'https://artifacts.netcore.co.in/artifactory/android' }
+        maven { url 'https://jitpack.io' }
+
+    }
+}
+
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.agrawalsuneet.androidlibs:dotsloader:1.3'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'android.arch.lifecycle:extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation "androidx.lifecycle:lifecycle-livedata:2.1.0"
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.github.appsfeature:otp-view:1.0'
+
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.facebook.android:facebook-android-sdk:8.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.google.android.exoplayer:exoplayer:2.11.8'
+    implementation 'in.payu:payu-checkout-pro:1.7.3'
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.github.joielechong:countrycodepicker:2.4.2'
+    implementation 'com.netcore.android:smartech-sdk:3.2.8'
+    implementation 'com.netcore.android:smartech-push:3.2.3'
+    implementation 'com.netcore.android:smartech-appinbox:3.2.3'
+    implementation 'com.github.dimitrisCBR:GradientTextView:1.2'
+    implementation 'com.github.HBiSoft:PickiT:0.1.14'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.github.abdularis:circularimageview:1.5'
+    implementation('io.socket:socket.io-client:2.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.android.play:core:1.9.0'
+    implementation 'com.github.minibugdev:drawablebadge:2.0.1'
+    // (other dependencies)
+    implementation "com.dyteclientmobile:sdk:+"
+    // optionally if you app does not have support libraries
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.24'
+    implementation 'com.github.JagarYousef:ChatVoicePlayer:1.1.0'
+    implementation 'com.github.EleshBaraiya:Phonic-Player:0.1'
+    implementation 'com.google.android:flexbox:1.1.0'
+    implementation 'com.mixpanel.android:mixpanel-android:6.+'
+    implementation 'androidx.work:work-runtime:2.7.0-alpha05'
+
+
+
+}

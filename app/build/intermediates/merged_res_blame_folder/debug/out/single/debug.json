@@ -1,0 +1,806 @@
+[
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_notinterestedb.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/notinterestedb.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_user_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_user_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_profession.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_profession.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_age.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_age.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_circular_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/circular_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_phone.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_phone.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/menu_speed_menu.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/menu/speed_menu.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_phone.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_phone.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_user.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_user.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_sent.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_sent.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap_fav_white_icon.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap/fav_white_icon.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/layout_customdialog.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/layout/customdialog.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_icon_fwd.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/icon_fwd.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_close_icon.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/close_icon.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_user.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_user.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_popup_background.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/popup_background.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_testimg.jpg.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/testimg.jpg"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_group.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_group.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_tag_bg.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/tag_bg.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-hdpi_play_white.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-hdpi/play_white.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/layout_activity_forgot_otp.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/layout/activity_forgot_otp.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_group.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_group.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_home.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_home.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_age.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-anydpi/ic_age.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_back_arrow.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_back_arrow.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_placeholder.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/placeholder.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_email.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_email.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_close.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_close.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_progressbar_new.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/progressbar_new.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/font_roboto_medium.ttf.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/font/roboto_medium.ttf"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_email.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_email.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_home_selector1.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/home_selector1.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_group_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_group_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-hdpi_user.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-hdpi/user.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_user.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_user.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-mdpi_email.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-mdpi/email.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_group_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_group_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_eye.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/eye.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_group_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_group_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_now.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/now.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_age.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_age.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_sent.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_sent.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/font_roboto_bold.ttf.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/font/roboto_bold.ttf"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_person.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-anydpi/ic_person.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_icon_arrow.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/icon_arrow.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_test1.jpg.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/test1.jpg"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_sent.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-mdpi/ic_sent.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_imgselector.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/imgselector.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_left.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_left.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/layout_dialog_layout.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/layout/dialog_layout.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_editxt_bg.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/editxt_bg.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_home.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_home.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_bg_title_white.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/bg_title_white.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_home_color1.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_home_color1.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_silver.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/silver.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_user_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_user_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-hdpi_fb_button.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-hdpi/fb_button.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-ldpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_close.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_close.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_back_arrow.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_back_arrow.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_user_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxxhdpi/ic_user_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_tab_color.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/tab_color.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_progressbar.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/progressbar.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_customprogressbar.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/customprogressbar.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-hdpi_google_button.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-hdpi/google_button.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_arrow_right_24.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/arrow_right_24.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_baseline_notifications_fill.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_baseline_notifications_fill.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_home_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_home_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_baseline_fullscreen_exit_24.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_baseline_fullscreen_exit_24.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-hdpi_fav_icon.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-hdpi/fav_icon.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_close.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_close.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_profession.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_profession.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_age.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_age.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_splashbg.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/splashbg.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_bill.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/bill.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_age.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_age.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_right_arrow.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/right_arrow.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_home1.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_home1.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-xhdpi_back.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-xhdpi/back.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_nob.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/nob.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_circular_progress_bar.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/circular_progress_bar.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_home_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_home_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_baseline_notifications.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_baseline_notifications.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_home.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_home.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_group.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_group.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launchernew.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_launchernew.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-mdpi_password.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-mdpi/password.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-mdpi_phone.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-mdpi/phone.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_home_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_home_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_back_arrow.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_back_arrow.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_splash_bg.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/splash_bg.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_sent.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-hdpi/ic_sent.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_notinterestedw.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/notinterestedw.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_editxt_bg_new.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/editxt_bg_new.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-mdpi_login_bg.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-mdpi/login_bg.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/font_roboto_italic.ttf.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/font/roboto_italic.ttf"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_profession.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-anydpi/ic_profession.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_speed_background.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/speed_background.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_notification1.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_notification1.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_close.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_close.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_group_selector.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/group_selector.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launchernew.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_launchernew.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap_edit_icon.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap/edit_icon.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_noti.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/noti.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_editxt_bg1.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/editxt_bg1.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launchernew.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_launchernew.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_group1.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_group1.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_group_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_group_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/layout_activity_login.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_camera.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_camera.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launchernew.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxxhdpi/ic_launchernew.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_baseline_fullscreen_24.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_baseline_fullscreen_24.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/layout_splash.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/layout/splash.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_star.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/star.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-hdpi_share_icon.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-hdpi/share_icon.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_user_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_user_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_bg_title_custom.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/bg_title_custom.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_user_color1.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_user_color1.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_home_selector.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/home_selector.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_logoicon_new.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/logoicon_new.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_color_notification1.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_color_notification1.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/xml_my_backup_file.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/xml/my_backup_file.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-mdpi_emailcall.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-mdpi/emailcall.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_phone.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_phone.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/font_roboto_regular.ttf.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/font/roboto_regular.ttf"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_itemimg1.jpg.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/itemimg1.jpg"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/xml_provider_paths.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/xml/provider_paths.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_back_arrow.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_back_arrow.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_phone.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_phone.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_email.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_email.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_group_selector1.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/group_selector1.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-hdpi_login1_bg.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-hdpi/login1_bg.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_person.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_person.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background_new.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_launcher_background_new.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_button_bg1.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/button_bg1.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_group_color1.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_group_color1.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_phone.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-anydpi/ic_phone.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/layout_activity_new_password.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/layout/activity_new_password.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_iwantob.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/iwantob.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_user_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_user_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_person.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_person.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-mdpi_name.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-mdpi/name.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_home_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxxhdpi/ic_home_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_sent.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_sent.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_lock_icon.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/lock_icon.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_person.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_person.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_card_bg.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/card_bg.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_email.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-anydpi/ic_email.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_button_bg_new.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/button_bg_new.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_white_radius_background.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/white_radius_background.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_sent.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-ldpi/ic_sent.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/font_poppins_semibold.ttf.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/font/poppins_semibold.ttf"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/font_poppins_regular.ttf.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/font/poppins_regular.ttf"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_person.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_person.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_user.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_user.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_custom_recycle.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/custom_recycle.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_iwanttobw.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/iwanttobw.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_person.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_person.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launchernew.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_launchernew.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_profession.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_profession.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_sent.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_sent.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_compt.jpg.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/compt.jpg"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_dateicon.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/dateicon.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/layout_activity_forgotpassword.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/layout/activity_forgotpassword.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_rounded_textview.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/rounded_textview.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-hdpi_apple_button.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-hdpi/apple_button.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_layout_bg.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/layout_bg.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_school.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_school.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_email.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_email.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_home_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-mdpi/ic_home_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_profession.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xhdpi/ic_profession.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_home.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxhdpi/ic_home.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_group.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-hdpi/ic_group.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_rectangle.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/rectangle.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_group_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-xxxhdpi/ic_group_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable-anydpi_ic_close.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable-anydpi/ic_close.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/layout_activity_signup.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/layout/activity_signup.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_warning.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_warning.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_user1.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_user1.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_ic_group_color.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/ic_group_color.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_button_bg.xml.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/button_bg.xml"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/drawable_close.png.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/drawable/close.png"
+    },
+    {
+        "merged": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    }
+]

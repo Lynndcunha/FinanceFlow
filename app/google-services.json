@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "370229327249",
+    "project_id": "androidcelebrityschool",
+    "storage_bucket": "androidcelebrityschool.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370229327249:android:46eb94230d99d1c9279630",
+        "android_client_info": {
+          "package_name": "com.financeflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370229327249-neaa615c8kmqqtp148hhshm3kqesv1jn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABOzrTumdcgo-EsCCPNsV1t40AgdIYw44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370229327249-neaa615c8kmqqtp148hhshm3kqesv1jn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

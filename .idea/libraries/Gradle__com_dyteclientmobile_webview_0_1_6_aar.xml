@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.dyteclientmobile:webview:0.1.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a69d612948af2acf18e03a7afcc571c/jetified-webview-0.1.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a69d612948af2acf18e03a7afcc571c/jetified-webview-0.1.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a69d612948af2acf18e03a7afcc571c/jetified-webview-0.1.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

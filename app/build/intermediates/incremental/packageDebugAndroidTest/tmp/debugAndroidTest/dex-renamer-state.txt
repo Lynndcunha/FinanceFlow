@@ -1,0 +1,7 @@
+#Mon Apr 29 16:54:04 IST 2024
+base.0=/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/dex/debugAndroidTest/mergeExtDexDebugAndroidTest/classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/classes.dex

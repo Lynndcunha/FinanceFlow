@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">FinanceFlow</string>
+
+    <string name="string_singup">Sign Up</string>
+    <string name="string_login">Login</string>
+    <string name="string_continue">Continue with Email</string>
+    <string name="String_socaillogin">Social Logins</string>
+    <string name="string_signincontent1">Sign in \nyour account</string>
+    <string name="string_signup">Create \nyour account</string>
+    <string name="string_signincontent2">Welcome back, you’ve been missed!</string>
+    <string name="string_socaillogin">Social Logins</string>
+    <string name="String_donthave">Don’t have an account?</string>
+    <string name="String_alreadyhave">Already have an account?</string>
+    <string name="string_your_password">Create your\nnew password</string>
+
+    <string name="string_back">Back</string>
+    <string name="string_send">Send</string>
+    <string name="string_verify">Verify</string>
+    <string name="string_addprofile">Add Profile Picture</string>
+    <string name="string_name">Full Name</string>
+    <string name="string_name_hint">Type Full Name</string>
+    <string name="string_email">Email Address</string>
+    <string name="string_email_hint">Type Email Address</string>
+    <string name="string_phoneno">Phone Number</string>
+    <string name="string_phoneno_hint">Type Phone Number</string>
+    <string name="string_otp">OTP</string>
+    <string name="string_otp_hint">Type OTP</string>
+    <string name="string_password">Password</string>
+    <string name="string_password_hint">Type Password</string>
+    <string name="string_confpass">Confirm Password</string>
+    <string name="string_confpass_hint">Type Confirm Password</string>
+    <string name="string_forgot">Forgot Password?</string>
+    <string name="string_forgotcontent">Enter the email associated with your account and we\'ll send an email wih instruction to reset your password </string>
+    <string name="string_forgot_hint">Email address or Phone Number</string>
+    <string name="string_premium">premium courses</string>
+    <string name="string_legend">by legends</string>
+    <string name="string_forgotcontentotp">Please enter the verification code we sent to your email </string>
+
+
+
+    <string name="string_allfieldmandatory">All field are mandatory</string>
+    <string name="string_validemail">Enter your valid email id</string>
+    <string name="string_validphone">Enter your valid phone number</string>
+    <string name="string_confpassword">Enter password does not match with confirm pasword </string>
+
+
+    <!-- Edit profile screen. -->
+
+
+
+
+</resources>

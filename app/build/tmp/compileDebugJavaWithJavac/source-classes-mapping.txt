@@ -1,0 +1,2 @@
+com/financeflow/BuildConfig.java
+ com.financeflow.BuildConfig

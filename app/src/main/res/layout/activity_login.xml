@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        app:layout_anchor="@+id/relativeLayout"
+        app:layout_anchorGravity="center">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/custom_size20">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="FINANCE FLOW"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_size20" />
+
+        <ScrollView
+            android:layout_marginBottom="5dp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="@dimen/custom_size20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/custom_size10"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/string_signincontent1"
+                    android:textColor="@color/label"
+                    android:textSize="@dimen/text_size25" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/string_email"
+                    android:textColor="@color/label"
+                    android:textSize="@dimen/text_size12"/>
+
+                <EditText
+                    android:id="@+id/edtxt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/editxt_bg_new"
+                    android:drawableRight="@mipmap/email"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/string_email_hint"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:padding="@dimen/custom_size12"
+                    android:textColor="@color/label"
+                    android:textColorHint="@color/label"
+                    android:nextFocusDown="@id/edtxt_password"
+                    android:textSize="@dimen/text_size12" />
+
+
+                <TextView
+                    android:id="@+id/edtxt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/string_password"
+                    android:textColor="@color/label"
+                    android:textSize="@dimen/text_size12" />
+
+                <EditText
+                    android:id="@+id/edtxt_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/editxt_bg_new"
+                    android:drawableRight="@mipmap/password"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/string_password_hint"
+                    android:singleLine="true"
+                    android:padding="@dimen/custom_size12"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/label"
+                    android:textColorHint="@color/label"
+                    android:textSize="@dimen/text_size12" />
+
+                <TextView
+                    android:id="@+id/txt_forgotpass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/custom_size10"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/string_forgot"
+                    android:textColor="@color/label"
+                    android:gravity="end"
+                    android:textSize="@dimen/text_size12" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_bg_new"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/string_login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/custom_size10"
+                    android:layout_marginRight="@dimen/custom_size5"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/String_donthave"
+                    android:textAlignment="center"
+                    android:textColor="@color/label"
+                    android:textSize="@dimen/text_size14"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/custom_size10"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/string_singup"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size16" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
