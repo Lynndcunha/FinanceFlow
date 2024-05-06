@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black1">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/custom_size20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="FINANCE FLOW"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/flow"
+            android:textSize="@dimen/text_size20" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/flow"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/custom_size10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Update Icome"
+                    android:textColor="@color/label"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size25" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add incomes through all the sources for an entire Month "
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size15"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Source of income"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+                <EditText
+                    android:id="@+id/edtxt_source"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/name"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Source of income"
+                    android:singleLine="true"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:background="@drawable/editxt_bg_new"/>
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+
+                    />
+                <EditText
+                    android:id="@+id/edtxt_amount"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/email"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Amount"
+                    android:singleLine="true"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/editxt_bg_new"/>
+
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_budget_save"
+                    android:layout_marginTop="@dimen/custom_size30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Save Now"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size14"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_bg_new"/>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

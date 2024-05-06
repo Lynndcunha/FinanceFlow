@@ -81,6 +81,46 @@
 
             />
 
+        <activity android:name="com.financeflow.screen.BudgetActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.BudgetListActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.UpdateBudgetActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.IncomeActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.IncomeListActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+        <activity android:name="com.financeflow.screen.UpdateIncomeActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.HomeActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
 
 
 

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black1">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/custom_size20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="FINANCE FLOW"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/flow"
+            android:textSize="@dimen/text_size20" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/flow"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/custom_size10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Update your budget"
+                    android:textColor="@color/label"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size25" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fixed Bills"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size15"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rent"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+                <EditText
+                    android:id="@+id/edtxt_rent"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/name"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Rent"
+                    android:singleLine="true"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/editxt_bg_new"/>
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Electricity Bills"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+
+                    />
+                <EditText
+                    android:id="@+id/edtxt_elect"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/email"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Electricity Bills"
+                    android:singleLine="true"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/editxt_bg_new"/>
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Bills"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+                <EditText
+                    android:id="@+id/edtxt_phone"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:drawableTint="@color/label"
+                    android:drawableRight="@mipmap/password"
+                    android:hint="Type Phone Bills"
+                    android:singleLine="true"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/editxt_bg_new"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Internet Bills"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+
+                <EditText
+                    android:id="@+id/edtxt_internet"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/password"
+                    android:drawableTint="@color/label"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Internet Bills"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:background="@drawable/editxt_bg_new"/>
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Student Loans"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+
+                <EditText
+                    android:id="@+id/edtxt_loan"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/password"
+                    android:drawableTint="@color/label"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Student Loans"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:background="@drawable/editxt_bg_new"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Groceries"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+
+                <EditText
+                    android:id="@+id/edtxt_grocery"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/password"
+                    android:drawableTint="@color/label"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Groceries"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:background="@drawable/editxt_bg_new"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gym membership"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+
+                <EditText
+                    android:id="@+id/edtxt_gym"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/password"
+                    android:drawableTint="@color/label"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Gym membership"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:background="@drawable/editxt_bg_new"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dining Out"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+
+                <EditText
+                    android:id="@+id/edtxt_dining"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/password"
+                    android:drawableTint="@color/label"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Dining Out"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:background="@drawable/editxt_bg_new"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Savings"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+
+                <EditText
+                    android:id="@+id/edtxt_saving"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/password"
+                    android:drawableTint="@color/label"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Savings"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:background="@drawable/editxt_bg_new"/>
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Subscriptions"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+
+                <EditText
+                    android:id="@+id/edtxt_subscr"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/password"
+                    android:drawableTint="@color/label"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type Subscriptions"
+                    android:singleLine="true"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:inputType="numberDecimal"
+
+                    android:background="@drawable/editxt_bg_new"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/custom_size15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Others"
+                    android:textColor="@color/label"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size12"
+                    />
+
+                <EditText
+                    android:id="@+id/edtxt_other"
+                    android:layout_marginTop="@dimen/custom_size5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/custom_size12"
+                    android:drawablePadding="@dimen/custom_size8"
+                    android:drawableRight="@mipmap/password"
+                    android:drawableTint="@color/label"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/text_size12"
+                    android:hint="Type other"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/label"
+                    android:textColor="@color/label"
+                    android:background="@drawable/editxt_bg_new"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_budget_save"
+                    android:layout_marginTop="@dimen/custom_size30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Save Now"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="@dimen/text_size14"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_bg_new"/>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

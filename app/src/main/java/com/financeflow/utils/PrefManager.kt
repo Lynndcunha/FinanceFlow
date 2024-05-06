@@ -17,14 +17,15 @@ class PrefManager(context: Context) {
     val DEVICETOKEN = "devicetoken"
     val MYINT= "interest"
     val CAPINT= "capint"
+    val USERID= "userid"
 
 
     val pref: SharedPreferences = context.getSharedPreferences(PREF_NAME, PRIVATE_MODE)
 
 
-    var noticount: String?
-        get() = pref.getString(LOCALNOTIFICATIONCOUNT, "0")
-        set(value) = pref.edit().putString(LOCALNOTIFICATIONCOUNT, value).apply()
+    var userid: String?
+        get() = pref.getString(USERID, "0")
+        set(value) = pref.edit().putString(USERID, value).apply()
 
     var config: String?
         get() = pref.getString(CONFIG, "")

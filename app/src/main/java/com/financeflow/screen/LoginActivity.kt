@@ -23,6 +23,7 @@ import com.financeflow.utils.NetworkUtil
 import com.facebook.*
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
+import com.financeflow.model.BudgetModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -91,50 +92,13 @@ class LoginActivity :BaseActivity(), View.OnClickListener {
                 Status.SUCCESS -> {
                     dialog.hideDialog()
                     mypref.usertoken = it.data!!.data!!.token
-
-                    /*mypref.email = it.data!!.data!!.email
-                    mypref.phonenumber = it.data!!.data!!.mobile
-                    mypref.name = it.data!!.data!!.firstName
-                    mypref.lname = it.data!!.data!!.lastName
-                    mypref.usertoken = it.data!!.data!!.token*/
+                    mypref.userid = it.data.data!!.id
 
                     Toast.makeText(this, it.data!!.message, Toast.LENGTH_LONG).show()
-                  /*  val json = gson.toJson(it.data!!.data!!)
-                    mypref.profile = json
+                    val intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+                    finish()
 
-
-                    val payload : HashMap<String, Any> = HashMap()
-               //     payload["full_name"] = it.data.data!!.firstName + it.data.data!!.lastName
-                    payload["email"] = it.data.data!!.email.toString()
-                    payload["sign_in_channel"] = "manual"
-
-                    val props = JSONObject()
-                    props.put("source", "Android")
-                    props.put("email", it.data.data?.email)
-                    Myapp.instance.mMixpanel.track("Login", props)*/
-
-//                    Smartech.getInstance(WeakReference(applicationContext)).setUserIdentity(it.data.data!!.email.toString())
-
-  //                  Smartech.getInstance(WeakReference(this)).trackEvent("login_user", payload)
-
-
-                  //  Toast.makeText(this, it.data!!.meta!!.message, Toast.LENGTH_LONG).show()
-
-                  /*  if(it.data.data!!.mobile!!.isEmpty()){
-
-                        val intent = Intent(this, HomeScreen::class.java)
-                        intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP)
-                        intent.addFlags(FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent)
-                        finish()
-                    }
-                    else {
-                        val intent = Intent(this, HomeScreen::class.java)
-                        intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP)
-                        intent.addFlags(FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent)
-                        finish()
-                    }*/
                 }
                 Status.LOADING -> {
 

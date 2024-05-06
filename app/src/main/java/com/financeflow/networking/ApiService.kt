@@ -26,8 +26,26 @@ interface ApiService {
     fun VERIFYONLYOTP(@Body verifyotpReqModel: VerifyOnlyotpReqModel ): Call<VerifyOnlyotpModel>
 
 
+    @POST("user/create-budget")
+    fun SAVEBUDGET(@Body signupReqModel: BudgetReqModel ): Call<BudgetModel>
+
+    @POST("user/update-budget")
+    fun UPDATEBUDGET(@Body signupReqModel: UpdateBudgetReqModel ): Call<updateBudgetModel>
 
 
+    @GET("user/budget-list")
+    fun GETBUDGET(@Query("userId") userId:String ): Call<BudgetListModel>
+
+
+    @POST("user/create-income")
+    fun SAVEINCOME(@Body signupReqModel: IncomeReqModel): Call<IncomeModel>
+
+
+    @GET("user/income-list")
+    fun GETINCOME(@Query("userId") userId:String ): Call<IncomeListesponseModel>
+
+    @POST("user/update-income")
+    fun UPDATEINCOME(@Body signupReqModel: UpdateIncomeReqModel): Call<UpdateIncomeModel>
 
 }
 

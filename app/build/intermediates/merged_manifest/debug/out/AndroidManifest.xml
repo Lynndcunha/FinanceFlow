@@ -135,6 +135,34 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.financeflow.screen.BudgetActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.BudgetListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.UpdateBudgetActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.IncomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.IncomeListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.UpdateIncomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.HomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.payu.ui.view.activities.CheckoutActivity"
             android:screenOrientation="portrait" />
 

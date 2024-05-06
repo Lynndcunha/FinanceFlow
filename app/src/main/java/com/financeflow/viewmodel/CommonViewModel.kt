@@ -21,6 +21,13 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     var forgetmodel : MutableLiveData<Resource<ForgetpassModel>> = MutableLiveData()
     var verifymodel : MutableLiveData<Resource<VerifyotpModel>> = MutableLiveData()
     var verifyonlymodel : MutableLiveData<Resource<VerifyOnlyotpModel>> = MutableLiveData()
+    var budgetmodel : MutableLiveData<Resource<BudgetModel>> = MutableLiveData()
+    var budgetlistmodel : MutableLiveData<Resource<BudgetListModel>> = MutableLiveData()
+    var updatebudgetmodel : MutableLiveData<Resource<updateBudgetModel>> = MutableLiveData()
+    var incomemodel : MutableLiveData<Resource<IncomeModel>> = MutableLiveData()
+    var incomelistmodel : MutableLiveData<Resource<IncomeListesponseModel>> = MutableLiveData()
+    var updateincomemodel : MutableLiveData<Resource<UpdateIncomeModel>> = MutableLiveData()
+
 
 
 
@@ -112,6 +119,273 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
         })
 
     }
+
+    fun SaveBudget(signupReqModel: BudgetReqModel){
+
+        budgetmodel.postValue(Resource.loading(null))
+
+        val call: Call<BudgetModel> = RetrofitBuilder.apiService.SAVEBUDGET(signupReqModel)
+        call.enqueue(object : Callback<BudgetModel> {
+
+            override fun onResponse(call: Call<BudgetModel>?, response: Response<BudgetModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        budgetmodel.postValue(Resource.success(response?.body()) as Resource<BudgetModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        budgetmodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        budgetmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        budgetmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<BudgetModel>?, t: Throwable?) {
+
+                budgetmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+    fun UpdateBudget(signupReqModel: UpdateBudgetReqModel){
+
+        updatebudgetmodel.postValue(Resource.loading(null))
+
+        val call: Call<updateBudgetModel> = RetrofitBuilder.apiService.UPDATEBUDGET(signupReqModel)
+        call.enqueue(object : Callback<updateBudgetModel> {
+
+            override fun onResponse(call: Call<updateBudgetModel>?, response: Response<updateBudgetModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        updatebudgetmodel.postValue(Resource.success(response?.body()) as Resource<updateBudgetModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        updatebudgetmodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        updatebudgetmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        updatebudgetmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<updateBudgetModel>?, t: Throwable?) {
+
+                updatebudgetmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+    fun FetchBudget(userid: String){
+
+        budgetlistmodel.postValue(Resource.loading(null))
+
+        val call: Call<BudgetListModel> = RetrofitBuilder.apiService.GETBUDGET(userid)
+        call.enqueue(object : Callback<BudgetListModel> {
+
+            override fun onResponse(call: Call<BudgetListModel>?, response: Response<BudgetListModel>?) {
+
+                Log.d("RES",response.toString());
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        budgetlistmodel.postValue(Resource.success(response?.body()) as Resource<BudgetListModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        budgetlistmodel.postValue(Resource.error(null, "No data found"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        budgetlistmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        budgetlistmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<BudgetListModel>?, t: Throwable?) {
+
+                budgetlistmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+    fun FetchIncome(userid: String){
+
+        incomelistmodel.postValue(Resource.loading(null))
+
+        val call: Call<IncomeListesponseModel> = RetrofitBuilder.apiService.GETINCOME(userid)
+        call.enqueue(object : Callback<IncomeListesponseModel> {
+
+            override fun onResponse(call: Call<IncomeListesponseModel>?, response: Response<IncomeListesponseModel>?) {
+
+                Log.d("RES",response.toString());
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        incomelistmodel.postValue(Resource.success(response?.body()) as Resource<IncomeListesponseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        incomelistmodel.postValue(Resource.error(null, "No data found"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        incomelistmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        incomelistmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<IncomeListesponseModel>?, t: Throwable?) {
+
+                incomelistmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun SaveIncome(signupReqModel: IncomeReqModel){
+
+        incomemodel.postValue(Resource.loading(null))
+
+        val call: Call<IncomeModel> = RetrofitBuilder.apiService.SAVEINCOME(signupReqModel)
+        call.enqueue(object : Callback<IncomeModel> {
+
+            override fun onResponse(call: Call<IncomeModel>?, response: Response<IncomeModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        incomemodel.postValue(Resource.success(response?.body()) as Resource<IncomeModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        incomemodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        incomemodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        incomemodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<IncomeModel>?, t: Throwable?) {
+
+                incomemodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun UpdateIncome(signupReqModel: UpdateIncomeReqModel){
+
+        updateincomemodel.postValue(Resource.loading(null))
+
+        val call: Call<UpdateIncomeModel> = RetrofitBuilder.apiService.UPDATEINCOME(signupReqModel)
+        call.enqueue(object : Callback<UpdateIncomeModel> {
+
+            override fun onResponse(call: Call<UpdateIncomeModel>?, response: Response<UpdateIncomeModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        updateincomemodel.postValue(Resource.success(response?.body()) as Resource<UpdateIncomeModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        updateincomemodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        updateincomemodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        updateincomemodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<UpdateIncomeModel>?, t: Throwable?) {
+
+                updateincomemodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
 
     fun Forgetpassword(forgetReqModel: ForgetReqModel){
 
@@ -252,6 +526,27 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
         return signupmodel
     }
 
+    fun getBudget(): LiveData<Resource<BudgetModel>> {
+        return budgetmodel
+    }
+
+    fun getIncome(): LiveData<Resource<IncomeModel>> {
+        return incomemodel
+    }
+
+    fun getUpdateBudget(): LiveData<Resource<updateBudgetModel>> {
+        return updatebudgetmodel
+    }
+    fun getBudgetList(): LiveData<Resource<BudgetListModel>> {
+        return budgetlistmodel
+    }
+
+    fun getUpdateIncomet(): LiveData<Resource<UpdateIncomeModel>> {
+        return updateincomemodel
+    }
+    fun getIncomeList(): LiveData<Resource<IncomeListesponseModel>> {
+        return incomelistmodel
+    }
     fun getForget(): LiveData<Resource<ForgetpassModel>> {
         return forgetmodel
     }
