@@ -32,6 +32,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_home.btn_Income
 import kotlinx.android.synthetic.main.activity_home.btn_expence
+import kotlinx.android.synthetic.main.activity_home.btn_goal
 import kotlinx.android.synthetic.main.activity_login.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -66,6 +67,8 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
         //txt_back.setOnClickListener { onClick(txt_back) }
         btn_Income.setOnClickListener { onClick(btn_Income) }
         btn_expence.setOnClickListener { onClick(btn_expence) }
+        btn_goal.setOnClickListener { onClick(btn_goal) }
+
         //fb.setOnClickListener { onClick(fb) }
         //google.setOnClickListener { onClick(google) }
 
@@ -131,7 +134,10 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
                 val intent = Intent(this, BudgetListActivity::class.java)
                 startActivity(intent)
             }
-
+            R.id.btn_goal -> {
+                val intent = Intent(this, GoalListActivity::class.java)
+                startActivity(intent)
+            }
 
         }
     }

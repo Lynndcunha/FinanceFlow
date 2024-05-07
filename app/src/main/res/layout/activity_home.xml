@@ -70,6 +70,18 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_size14" />
 
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_size150"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/button_bg_new"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Goal"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size14" />
+
 
             </LinearLayout>
 

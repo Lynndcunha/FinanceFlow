@@ -25,6 +25,7 @@ import com.financeflow.utils.CustomDialog
 import com.financeflow.utils.NetworkUtil
 import kotlinx.android.synthetic.main.budget_list.recycler_chat
 import kotlinx.android.synthetic.main.income_list.btn_add
+import kotlinx.android.synthetic.main.income_list.txt_back
 
 
 class IncomeListActivity : AppCompatActivity() {
@@ -64,6 +65,12 @@ class IncomeListActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
+        txt_back.setOnClickListener {
+
+            finish()
+        }
+
+
 
     }
 
@@ -95,8 +102,8 @@ class IncomeListActivity : AppCompatActivity() {
                     dialog.hideDialog()
                    /* Glide.with(this).load(it.data!!.data!![0].mainBanner).centerCrop().into(banner1)
                     competationAdapter.setList(it.data.data!!)*/
-                   // Log.d("NOTISIZE:", it.data?.data?.income?.size.toString())
-                    it.data?.data?.let { it1 -> chatAdapter.setList(it1) }
+                    Log.d("NOTISIZE:", it.data?.data?.size.toString())
+                    it.data?.data?.let { it1 -> chatAdapter.setList(it1,) }
 
                 }
                 Status.LOADING -> {

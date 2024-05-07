@@ -31,6 +31,7 @@ import kotlinx.android.synthetic.main.activity_budget.edtxt_phone
 import kotlinx.android.synthetic.main.activity_budget.edtxt_rent
 import kotlinx.android.synthetic.main.activity_budget.edtxt_saving
 import kotlinx.android.synthetic.main.activity_budget.edtxt_subscr
+import kotlinx.android.synthetic.main.activity_budget.txt_back
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -74,6 +75,12 @@ class BudgetActivity : BaseActivity(), View.OnClickListener {
 
         setupViewModel()
         setupObserver()
+
+        txt_back.setOnClickListener {
+
+            finish()
+        }
+
 
     }
 

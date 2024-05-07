@@ -24,19 +24,10 @@ import com.financeflow.model.IncomeReqModel
 import com.financeflow.model.IncomeReqModelList
 import com.financeflow.model.UpdateIncomeReqModel
 import kotlinx.android.synthetic.main.activity_budget.btn_budget_save
-import kotlinx.android.synthetic.main.activity_budget.edtxt_dining
-import kotlinx.android.synthetic.main.activity_budget.edtxt_elect
-import kotlinx.android.synthetic.main.activity_budget.edtxt_grocery
-import kotlinx.android.synthetic.main.activity_budget.edtxt_gym
-import kotlinx.android.synthetic.main.activity_budget.edtxt_internet
-import kotlinx.android.synthetic.main.activity_budget.edtxt_loan
-import kotlinx.android.synthetic.main.activity_budget.edtxt_other
-import kotlinx.android.synthetic.main.activity_budget.edtxt_phone
-import kotlinx.android.synthetic.main.activity_budget.edtxt_rent
-import kotlinx.android.synthetic.main.activity_budget.edtxt_saving
-import kotlinx.android.synthetic.main.activity_budget.edtxt_subscr
+
 import kotlinx.android.synthetic.main.activity_income.edtxt_amount
 import kotlinx.android.synthetic.main.activity_income.edtxt_source
+import kotlinx.android.synthetic.main.activity_updateincome.txt_back
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -94,6 +85,11 @@ class UpdateIncomeActivity : BaseActivity(), View.OnClickListener {
 
         setupViewModel()
         setupObserver()
+
+        txt_back.setOnClickListener {
+
+            finish()
+        }
 
     }
 

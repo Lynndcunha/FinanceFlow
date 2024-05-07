@@ -22,6 +22,7 @@ import com.financeflow.util.PrefManager
 import com.financeflow.utils.CustomDialog
 import com.financeflow.utils.NetworkUtil
 import kotlinx.android.synthetic.main.budget_list.recycler_chat
+import kotlinx.android.synthetic.main.budget_list.txt_back
 import kotlinx.android.synthetic.main.income_list.btn_add
 
 
@@ -61,6 +62,12 @@ class BudgetListActivity : AppCompatActivity() {
             val intent = Intent(this, BudgetActivity::class.java)
             startActivity(intent)
         })
+
+        txt_back.setOnClickListener {
+
+            finish()
+        }
+
 
     }
 

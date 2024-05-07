@@ -34,8 +34,7 @@ class IncomeAdapter(private val c: Context,) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BeatsViewHolder {
 
-        val v =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_budgetadapter, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.item_budgetadapter, parent, false)
 
         return BeatsViewHolder(v)
 

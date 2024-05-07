@@ -3544,9 +3544,11 @@ id btn_action3
 id btn_add
 id btn_budget_save
 id btn_expence
+id btn_goal
 id btn_login
 id btn_singup
 id budget
+id budget1
 id button
 id buttonPanel
 id button_cancel_transaction
@@ -3703,6 +3705,8 @@ id edit_query
 id edit_vpa
 id edtxt_amount
 id edtxt_confpass
+id edtxt_date
+id edtxt_desc
 id edtxt_dining
 id edtxt_elect
 id edtxt_email
@@ -4619,12 +4623,14 @@ layout activity_budget
 layout activity_checkout_collapsing
 layout activity_forgot_otp
 layout activity_forgotpassword
+layout activity_goal
 layout activity_home
 layout activity_income
 layout activity_login
 layout activity_new_password
 layout activity_payment_response
 layout activity_signup
+layout activity_test1
 layout activity_updatebudget
 layout activity_updateincome
 layout add_card_layout
@@ -4692,9 +4698,11 @@ layout fragment_net_banking
 layout fragment_result
 layout fragment_review_order
 layout fragment_wallet
+layout goal_list
 layout inapp_image_popup
 layout income_list
 layout item_budgetadapter
+layout item_goaladapter
 layout item_layout_order_detail
 layout layout_custom_toolbar_menu
 layout layout_delete_saved_option

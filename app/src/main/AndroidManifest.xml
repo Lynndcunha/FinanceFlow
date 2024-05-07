@@ -121,8 +121,17 @@
             android:exported="true"
 
             />
+        <activity android:name="com.financeflow.screen.GoalListActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
 
+            />
 
+        <activity android:name="com.financeflow.screen.GoalActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
 
     </application>
 
