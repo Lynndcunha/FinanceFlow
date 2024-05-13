@@ -20,7 +20,7 @@ class ExpenseDatum : Serializable  {
 
     @SerializedName("amount")
     @Expose
-    var amount: Int? = null
+    var amount: Any? = null
 
     @SerializedName("date")
     @Expose

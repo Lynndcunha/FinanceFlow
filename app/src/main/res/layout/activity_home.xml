@@ -32,17 +32,19 @@
             android:textSize="@dimen/text_size20" />
 
 
-
         <ImageView
+            android:id="@+id/noti"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/ic_notification"
-            android:id="@+id/noti"
-            android:layout_toLeftOf="@+id/profile"
-            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
 
-            />
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/profile"
+            android:src="@drawable/ic_notification" />
 
         <ImageView
             android:id="@+id/profile"

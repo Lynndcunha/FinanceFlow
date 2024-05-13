@@ -89,31 +89,23 @@ class ExpenseActivity : BaseActivity(), View.OnClickListener {
 
             val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
 
-            // on below line we are passing language model
-            // and model free form in our intent
+
             intent.putExtra(
                 RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
             )
 
-            // on below line we are passing our
-            // language as a default language.
+
             intent.putExtra(
                 RecognizerIntent.EXTRA_LANGUAGE,
                 Locale.getDefault()
             )
 
-            // on below line we are specifying a prompt
-            // message as speak to text on below line.
-            intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak to text")
+          intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak to text")
 
-            // on below line we are specifying a try catch block.
-            // in this block we are calling a start activity
-            // for result method and passing our result code.
-            try {
+              try {
                 startActivityForResult(intent, REQUEST_CODE_SPEECH_INPUT)
             } catch (e: Exception) {
-                // on below line we are displaying error message in toast
                 Toast
                     .makeText(
                         this, " " + e.message,
