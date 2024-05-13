@@ -27,6 +27,13 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     var incomemodel : MutableLiveData<Resource<IncomeModel>> = MutableLiveData()
     var incomelistmodel : MutableLiveData<Resource<IncomeListesponseModel>> = MutableLiveData()
     var updateincomemodel : MutableLiveData<Resource<UpdateIncomeModel>> = MutableLiveData()
+    var goalmodel : MutableLiveData<Resource<GoalModel>> = MutableLiveData()
+    var goallistmodel : MutableLiveData<Resource<GoalListesponseModel>> = MutableLiveData()
+    var goalupdatebudgetmodel : MutableLiveData<Resource<goalupdateBudgetModel>> = MutableLiveData()
+    var expensemodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
+    var expenselistmodel : MutableLiveData<Resource<ExpenseListesponseModel>> = MutableLiveData()
+    var expenseupdatebudgetmodel : MutableLiveData<Resource<expenseupdateBudgetModel>> = MutableLiveData()
+
 
 
 
@@ -164,6 +171,98 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
 
     }
 
+
+
+    fun SaveGoal(signupReqModel: GoalReqModel){
+
+        goalmodel.postValue(Resource.loading(null))
+
+        val call: Call<GoalModel> = RetrofitBuilder.apiService.SAVEGOAL(signupReqModel)
+        call.enqueue(object : Callback<GoalModel> {
+
+            override fun onResponse(call: Call<GoalModel>?, response: Response<GoalModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        goalmodel.postValue(Resource.success(response?.body()) as Resource<GoalModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        goalmodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        goalmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        goalmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<GoalModel>?, t: Throwable?) {
+
+                goalmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun SaveExpense(signupReqModel: ExpenseReqModel){
+
+        expensemodel.postValue(Resource.loading(null))
+
+        val call: Call<ExpenseModel> = RetrofitBuilder.apiService.SAVEEXPENSE(signupReqModel)
+        call.enqueue(object : Callback<ExpenseModel> {
+
+            override fun onResponse(call: Call<ExpenseModel>?, response: Response<ExpenseModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        expensemodel.postValue(Resource.success(response?.body()) as Resource<ExpenseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        expensemodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        expensemodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        expensemodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ExpenseModel>?, t: Throwable?) {
+
+                expensemodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
     fun UpdateBudget(signupReqModel: UpdateBudgetReqModel){
 
         updatebudgetmodel.postValue(Resource.loading(null))
@@ -202,6 +301,96 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
             override fun onFailure(call: Call<updateBudgetModel>?, t: Throwable?) {
 
                 updatebudgetmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun UpdateGoal(signupReqModel: GoalUpdateReqModel){
+
+        goalupdatebudgetmodel.postValue(Resource.loading(null))
+
+        val call: Call<goalupdateBudgetModel> = RetrofitBuilder.apiService.UPDATEGOAL(signupReqModel)
+        call.enqueue(object : Callback<goalupdateBudgetModel> {
+
+            override fun onResponse(call: Call<goalupdateBudgetModel>?, response: Response<goalupdateBudgetModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        goalupdatebudgetmodel.postValue(Resource.success(response?.body()) as Resource<goalupdateBudgetModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        goalupdatebudgetmodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        goalupdatebudgetmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        goalupdatebudgetmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<goalupdateBudgetModel>?, t: Throwable?) {
+
+                goalupdatebudgetmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun UpdateExpense(signupReqModel: ExpenseUpdateReqModel){
+
+        expenseupdatebudgetmodel.postValue(Resource.loading(null))
+
+        val call: Call<expenseupdateBudgetModel> = RetrofitBuilder.apiService.UPDATEEXPENSE(signupReqModel)
+        call.enqueue(object : Callback<expenseupdateBudgetModel> {
+
+            override fun onResponse(call: Call<expenseupdateBudgetModel>?, response: Response<expenseupdateBudgetModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        expenseupdatebudgetmodel.postValue(Resource.success(response?.body()) as Resource<expenseupdateBudgetModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        expenseupdatebudgetmodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        expenseupdatebudgetmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        expenseupdatebudgetmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<expenseupdateBudgetModel>?, t: Throwable?) {
+
+                expenseupdatebudgetmodel.postValue(Resource.error(null,"something went wrong"))
             }
 
         })
@@ -290,6 +479,95 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
             override fun onFailure(call: Call<IncomeListesponseModel>?, t: Throwable?) {
 
                 incomelistmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun FetchGoal(userid: String){
+
+        goallistmodel.postValue(Resource.loading(null))
+
+        val call: Call<GoalListesponseModel> = RetrofitBuilder.apiService.GETGOAL(userid)
+        call.enqueue(object : Callback<GoalListesponseModel> {
+
+            override fun onResponse(call: Call<GoalListesponseModel>?, response: Response<GoalListesponseModel>?) {
+
+                Log.d("RES",response.toString());
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        goallistmodel.postValue(Resource.success(response?.body()) as Resource<GoalListesponseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        goallistmodel.postValue(Resource.error(null, "No data found"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        goallistmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        goallistmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<GoalListesponseModel>?, t: Throwable?) {
+
+                goallistmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+    fun FetchExpense(userid: String){
+
+        expenselistmodel.postValue(Resource.loading(null))
+
+        val call: Call<ExpenseListesponseModel> = RetrofitBuilder.apiService.GETEXPENSE(userid)
+        call.enqueue(object : Callback<ExpenseListesponseModel> {
+
+            override fun onResponse(call: Call<ExpenseListesponseModel>?, response: Response<ExpenseListesponseModel>?) {
+
+                Log.d("RES",response.toString());
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        expenselistmodel.postValue(Resource.success(response?.body()) as Resource<ExpenseListesponseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        expenselistmodel.postValue(Resource.error(null, "No data found"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        expenselistmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        expenselistmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ExpenseListesponseModel>?, t: Throwable?) {
+
+                expenselistmodel.postValue(Resource.error(null,"something went wrong"))
             }
 
         })
@@ -534,8 +812,23 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
         return incomemodel
     }
 
+
+    fun getSaveGoal(): LiveData<Resource<GoalModel>> {
+        return goalmodel
+    }
+
+    fun getSaveExpense(): LiveData<Resource<ExpenseModel>> {
+        return expensemodel
+    }
     fun getUpdateBudget(): LiveData<Resource<updateBudgetModel>> {
         return updatebudgetmodel
+    }
+
+    fun getUpdateGoal(): LiveData<Resource<goalupdateBudgetModel>> {
+        return goalupdatebudgetmodel
+    }
+    fun getUpdatExpense(): LiveData<Resource<expenseupdateBudgetModel>> {
+        return expenseupdatebudgetmodel
     }
     fun getBudgetList(): LiveData<Resource<BudgetListModel>> {
         return budgetlistmodel
@@ -546,6 +839,14 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     }
     fun getIncomeList(): LiveData<Resource<IncomeListesponseModel>> {
         return incomelistmodel
+    }
+
+    fun getGoalList(): LiveData<Resource<GoalListesponseModel>> {
+        return goallistmodel
+    }
+
+    fun getExpenseList(): LiveData<Resource<ExpenseListesponseModel>> {
+        return expenselistmodel
     }
     fun getForget(): LiveData<Resource<ForgetpassModel>> {
         return forgetmodel

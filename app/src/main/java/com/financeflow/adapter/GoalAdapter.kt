@@ -2,32 +2,26 @@ package com.financeflow.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
-import android.util.Log
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.financeflow.R
-import com.financeflow.model.BudgetData
-import com.financeflow.model.IData
-import com.financeflow.model.Income
-import com.financeflow.screen.BudgetActivity
-import com.financeflow.screen.BudgetListActivity
-import com.financeflow.screen.UpdateBudgetActivity
-import com.financeflow.screen.UpdateIncomeActivity
+import com.financeflow.model.GoalDatum
+import com.financeflow.screen.UpdateGoalActivity
 import kotlinx.android.synthetic.main.item_budgetadapter.view.budget
 import java.io.Serializable
 
 
 class GoalAdapter(private val c: Context,) :
     RecyclerView.Adapter<GoalAdapter.BeatsViewHolder>() {
-    private var userlist: List<IData>? = null
+    private var userlist: List<GoalDatum>? = null
     private var userId: Int = 0
     private var promolink : String = "test";
 
-    fun setList(userlist1: List<IData>,) {
+    fun setList(userlist1: List<GoalDatum>,) {
         this.userlist = userlist1
         notifyDataSetChanged()
     }
@@ -45,7 +39,7 @@ class GoalAdapter(private val c: Context,) :
         if (userlist != null) {
             return userlist!!.size
         }
-        return 6
+        return 0
     }
 
     override fun onBindViewHolder(holder: BeatsViewHolder, position: Int) {
@@ -89,17 +83,17 @@ class GoalAdapter(private val c: Context,) :
             )
         }*/
 
-       /* holder.mName.text = userlist?.get(position)?.income?.get(0)?.incomeType.toString()
+        holder.mName.text = userlist?.get(position)?.name.toString()
 
         holder.itemView.setOnClickListener {
 
-            val intent = Intent(c, UpdateIncomeActivity::class.java)
-            intent.putExtra("value", userlist?.get(position)?.income?.get(0) as Serializable)
+            val intent = Intent(c, UpdateGoalActivity::class.java)
+            intent.putExtra("value", userlist?.get(position) as Serializable)
             intent.putExtra("id", userlist?.get(position)?.id)
 
             c.startActivity(intent)
 
-                  }*/
+                  }
 
 
     }

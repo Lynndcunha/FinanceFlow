@@ -50,8 +50,6 @@ class GoalListActivity : AppCompatActivity() {
 
 
 
-      //  setupViewModel()
-      //  setupObserver()
 
         val mLayoutManager = LinearLayoutManager(this)
         chatAdapter = GoalAdapter(this)
@@ -71,6 +69,8 @@ class GoalListActivity : AppCompatActivity() {
             finish()
         }
 
+        setupViewModel()
+        setupObserver()
 
 
     }
@@ -78,14 +78,14 @@ class GoalListActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-       /* if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
+        if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
 
-            viewModel.FetchIncome(mypref.userid.toString())
+            viewModel.FetchGoal(mypref.userid.toString())
 
         }
         else{
             dialog.warningDialog()
-        }*/
+        }
 
     }
 
@@ -95,7 +95,7 @@ class GoalListActivity : AppCompatActivity() {
 
     fun setupObserver() {
 
-       viewModel.getIncomeList().observe(this, androidx.lifecycle.Observer {
+       viewModel.getGoalList().observe(this, androidx.lifecycle.Observer {
 
             when (it.status) {
 

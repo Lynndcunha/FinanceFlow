@@ -133,6 +133,44 @@
 
             />
 
+
+        <activity android:name="com.financeflow.screen.ExpenseActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.ExpenseListActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.UpdateGoalActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.UpdateExpenseActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.NotificationListActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+
     </application>
 
 </manifest>

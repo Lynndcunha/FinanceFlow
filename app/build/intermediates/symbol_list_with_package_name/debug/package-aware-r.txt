@@ -3014,6 +3014,7 @@ drawable home_selector
 drawable home_selector1
 drawable hourglass
 drawable hsbc
+drawable ic_acc
 drawable ic_action_pause
 drawable ic_action_play
 drawable ic_age
@@ -3037,6 +3038,7 @@ drawable ic_color_notification1
 drawable ic_email
 drawable ic_filter_option
 drawable ic_frame
+drawable ic_fwd
 drawable ic_gif
 drawable ic_group
 drawable ic_group1
@@ -3057,11 +3059,13 @@ drawable ic_launcher_background_new
 drawable ic_launcher_foreground
 drawable ic_launchernew
 drawable ic_left
+drawable ic_logout
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_multiple_mode_offer
+drawable ic_notification
 drawable ic_notification1
 drawable ic_offers_label
 drawable ic_pause_black_24dp
@@ -3543,6 +3547,7 @@ id btn_action2
 id btn_action3
 id btn_add
 id btn_budget_save
+id btn_exp
 id btn_expence
 id btn_goal
 id btn_login
@@ -3835,6 +3840,8 @@ id icon
 id icon_group
 id icon_only
 id icons_container
+id idIVMic
+id idTVOutput
 id ifRoom
 id ignore
 id ignoreRequest
@@ -3958,6 +3965,7 @@ id lltop
 id loadContent
 id loading
 id loadingProgressBar
+id logout
 id mProgressBar
 id magic_retry_container
 id main_frame
@@ -3989,6 +3997,8 @@ id material_value_index
 id media_actions
 id message
 id messenger_send_button
+id mic_amount
+id mic_category
 id middle
 id mini
 id month_grid
@@ -4038,6 +4048,7 @@ id no_result_tv
 id none
 id normal
 id north
+id noti
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -4088,6 +4099,7 @@ id pointer_move
 id position
 id postLayout
 id preference_divider_view
+id profile
 id progress
 id progressBar
 id progressBarFragment
@@ -4621,6 +4633,7 @@ layout abc_tooltip
 layout account_type_bottom_sheet_layout
 layout activity_budget
 layout activity_checkout_collapsing
+layout activity_expense
 layout activity_forgot_otp
 layout activity_forgotpassword
 layout activity_goal
@@ -4692,6 +4705,7 @@ layout exo_player_control_view
 layout exo_player_view
 layout exo_simple_player_view
 layout exo_track_selection_dialog
+layout expense_list
 layout fps_view
 layout fragment_card
 layout fragment_net_banking
@@ -4704,6 +4718,7 @@ layout income_list
 layout item_budgetadapter
 layout item_goaladapter
 layout item_layout_order_detail
+layout item_notificationadapter
 layout layout_custom_toolbar_menu
 layout layout_delete_saved_option
 layout layout_emi_tenure
@@ -4771,6 +4786,7 @@ layout notification_carousel_landscape_layout
 layout notification_carousel_portrait_layout
 layout notification_collapsed_layout
 layout notification_gif_layout
+layout notification_list
 layout notification_media_action
 layout notification_media_cancel_action
 layout notification_rich_image_layout
@@ -4801,6 +4817,7 @@ layout payu_saved_card_item
 layout payu_saved_card_list_item
 layout payu_search_error_layout
 layout payu_verify_otp_saved_card_option_bottom_sheet
+layout profile
 layout progress_dialog
 layout quick_option_list_item
 layout redbox_item_frame
@@ -4840,6 +4857,7 @@ layout test_toolbar
 layout test_toolbar_custom_background
 layout test_toolbar_elevation
 layout test_toolbar_surface
+layout text_speech
 layout text_view_with_line_height_from_appearance
 layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style

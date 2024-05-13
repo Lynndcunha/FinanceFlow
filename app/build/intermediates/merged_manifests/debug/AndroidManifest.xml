@@ -102,6 +102,7 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/ic_launchernew"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.Finance_flow"
         android:usesCleartextTraffic="true" >
         <activity
@@ -168,6 +169,30 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.financeflow.screen.GoalActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.ExpenseActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.ExpenseListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.UpdateGoalActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.UpdateExpenseActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.NotificationListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.ProfileActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity

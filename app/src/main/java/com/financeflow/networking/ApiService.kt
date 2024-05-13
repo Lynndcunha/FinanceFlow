@@ -47,5 +47,31 @@ interface ApiService {
     @POST("user/update-income")
     fun UPDATEINCOME(@Body signupReqModel: UpdateIncomeReqModel): Call<UpdateIncomeModel>
 
+
+    @POST("user/create-goal")
+    fun SAVEGOAL(@Body signupReqModel: GoalReqModel): Call<GoalModel>
+
+    @GET("user/list-goal")
+    fun GETGOAL(@Query("userId") userId:String ): Call<GoalListesponseModel>
+
+
+    @POST("user/edit-goal")
+    fun UPDATEGOAL(@Body signupReqModel: GoalUpdateReqModel ): Call<goalupdateBudgetModel>
+
+
+
+    @POST("user/create-expense")
+    fun SAVEEXPENSE(@Body signupReqModel: ExpenseReqModel): Call<ExpenseModel>
+
+
+    @GET("user/list-expense")
+    fun GETEXPENSE(@Query("userId") userId:String ): Call<ExpenseListesponseModel>
+
+
+    @POST("user/edit-expense")
+    fun UPDATEEXPENSE(@Body signupReqModel: ExpenseUpdateReqModel ): Call<expenseupdateBudgetModel>
+
+
+
 }
 

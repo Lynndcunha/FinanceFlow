@@ -1,34 +1,39 @@
 package com.financeflow.screen
 
 import CommonViewModel
+import Status
+import android.app.DatePickerDialog
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import android.view.WindowManager
+import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProviders
 import com.financeflow.R
 import com.financeflow.base.BaseActivity
-import com.financeflow.model.SignupReqModel
+import com.financeflow.model.BudgetReqModel
+import com.financeflow.model.GoalReqModel
+import com.financeflow.model.IncomeReqModel
+import com.financeflow.model.IncomeReqModelList
+import com.financeflow.util.PrefManager
+import com.financeflow.util.ValidationUtils
 import com.financeflow.utils.CustomDialog
 import com.financeflow.utils.NetworkUtil
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_signup.*
-import  com.financeflow.util.PrefManager
-import  com.financeflow.util.ValidationUtils
-import android.view.WindowManager
-import android.widget.Toast
-import com.financeflow.model.BudgetData
-import com.financeflow.model.BudgetReqModel
-import com.financeflow.model.IncomeReqModel
-import com.financeflow.model.IncomeReqModelList
-import kotlinx.android.synthetic.main.activity_budget.btn_budget_save
+import kotlinx.android.synthetic.main.activity_goal.btn_budget_save
 
-import kotlinx.android.synthetic.main.activity_income.edtxt_amount
-import kotlinx.android.synthetic.main.activity_income.edtxt_source
-import kotlinx.android.synthetic.main.activity_income.txt_back
+import kotlinx.android.synthetic.main.activity_goal.edtxt_date
+import kotlinx.android.synthetic.main.activity_goal.edtxt_desc
+import kotlinx.android.synthetic.main.activity_goal.edtxt_amount
+import kotlinx.android.synthetic.main.activity_goal.edtxt_source
+import kotlinx.android.synthetic.main.activity_goal.txt_back
 import java.text.SimpleDateFormat
-import java.util.*
-import kotlin.collections.ArrayList
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
+import javax.xml.datatype.DatatypeConstants.MONTHS
 
 
 class GoalActivity : BaseActivity(), View.OnClickListener {
@@ -39,15 +44,17 @@ class GoalActivity : BaseActivity(), View.OnClickListener {
     lateinit var validation: ValidationUtils
     lateinit var gson : Gson
     lateinit var  date: String
-    lateinit var filterDataModel : BudgetData
+    var picker: DatePickerDialog? = null
+    private val calendar = Calendar.getInstance()
 
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
 
         mypref = PrefManager(this)
         dialog = CustomDialog(this)
-      //  dialog.hidSystemUI()
+        //  dialog.hidSystemUI()
         gson = Gson()
 
         date = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Date())
@@ -58,8 +65,8 @@ class GoalActivity : BaseActivity(), View.OnClickListener {
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         //txt_back.setOnClickListener { onClick(txt_back) }
-       // btn_budget_save.setOnClickListener { onClick(btn_budget_save) }
-      //  txt_signup.setOnClickListener { onClick(txt_signup) }
+         btn_budget_save.setOnClickListener { onClick(btn_budget_save) }
+        //  txt_signup.setOnClickListener { onClick(txt_signup) }
 
         validation = ValidationUtils(this)
 
@@ -71,6 +78,35 @@ class GoalActivity : BaseActivity(), View.OnClickListener {
             finish()
         }
 
+        edtxt_date.setOnClickListener {
+
+            showDatePicker()
+
+        }
+    }
+
+    private fun showDatePicker() {
+        // Create a DatePickerDialog
+        val datePickerDialog = DatePickerDialog(
+            this, {DatePicker, year: Int, monthOfYear: Int, dayOfMonth: Int ->
+                // Create a new Calendar instance to hold the selected date
+                val selectedDate = Calendar.getInstance()
+                // Set the selected date using the values received from the DatePicker dialog
+                selectedDate.set(year, monthOfYear, dayOfMonth)
+                // Create a SimpleDateFormat to format the date as "dd/MM/yyyy"
+                val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                // Format the selected date into a string
+                val formattedDate = dateFormat.format(selectedDate.time)
+                // Update the TextView to display the selected date with the "Selected Date: " prefix
+                edtxt_date.setText(formattedDate)
+                date= formattedDate
+            },
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH)
+        )
+        // Show the DatePicker dialog
+        datePickerDialog.show()
     }
 
     override fun onClick(v: View?) {
@@ -80,24 +116,23 @@ class GoalActivity : BaseActivity(), View.OnClickListener {
             }
             R.id.btn_budget_save -> {
 
-                val list: ArrayList<IncomeReqModelList> = ArrayList()
+                if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
 
-                list.add(IncomeReqModelList(edtxt_source.text.toString(),edtxt_amount.text.toString()))
+                    val signupReqModel = GoalReqModel(
+                        mypref.userid.toString(),
+                        edtxt_source.text.toString(),
+                        edtxt_amount.text.toString(),
+                        date,
+                        edtxt_desc.text.toString(),
+                    )
 
+                   viewModel.SaveGoal(signupReqModel)
+                } else {
 
-                            if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
+                    dialog.warningDialog()
 
-                                val signupReqModel = IncomeReqModel(
-                                    mypref.userid.toString(),
-                                    list
-                                    )
+                }
 
-                                viewModel.SaveIncome(signupReqModel)
-                            } else {
-
-                                dialog.warningDialog()
-
-                            }
 
 
             }
@@ -116,7 +151,7 @@ class GoalActivity : BaseActivity(), View.OnClickListener {
 
     fun setupObserver() {
 
-        viewModel.getIncome().observe(this, androidx.lifecycle.Observer {
+        viewModel.getSaveGoal().observe(this, androidx.lifecycle.Observer {
 
             when (it.status) {
 

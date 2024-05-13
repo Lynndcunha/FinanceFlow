@@ -31,8 +31,11 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_home.btn_Income
+import kotlinx.android.synthetic.main.activity_home.btn_exp
 import kotlinx.android.synthetic.main.activity_home.btn_expence
 import kotlinx.android.synthetic.main.activity_home.btn_goal
+import kotlinx.android.synthetic.main.activity_home.noti
+import kotlinx.android.synthetic.main.activity_home.profile
 import kotlinx.android.synthetic.main.activity_login.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -68,6 +71,7 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
         btn_Income.setOnClickListener { onClick(btn_Income) }
         btn_expence.setOnClickListener { onClick(btn_expence) }
         btn_goal.setOnClickListener { onClick(btn_goal) }
+        btn_exp.setOnClickListener { onClick(btn_exp) }
 
         //fb.setOnClickListener { onClick(fb) }
         //google.setOnClickListener { onClick(google) }
@@ -76,6 +80,20 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
             txt_link1.setMovementMethod(LinkMovementMethod.getInstance());
 
         }*/
+
+        noti.setOnClickListener {
+
+            val intent = Intent(this, NotificationListActivity::class.java)
+            startActivity(intent)
+
+        }
+
+        profile.setOnClickListener {
+
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+
+        }
 
         setupViewModel()
         setupObserver()
@@ -138,7 +156,10 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
                 val intent = Intent(this, GoalListActivity::class.java)
                 startActivity(intent)
             }
-
+            R.id.btn_exp -> {
+                val intent = Intent(this, ExpenseListActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 
