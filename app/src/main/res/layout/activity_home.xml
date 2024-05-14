@@ -72,55 +72,80 @@
                 android:orientation="vertical">
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+
+                    >
+
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_Income"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/custom_size150"
-                    android:layout_marginTop="20dp"
                     android:background="@drawable/button_bg_new"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Income"
+                    android:text="Income\n$18500"
                     android:textAllCaps="false"
+                    android:layout_weight="50"
                     android:textColor="@color/white"
+                    android:layout_margin="5dp"
                     android:textSize="@dimen/text_size14" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_expence"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/custom_size150"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/button_bg_new"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Budget"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/text_size14" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_exp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/custom_size150"
+                        android:layout_weight="50"
+                        android:background="@drawable/button_bg_new"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Expenses\n$12500"
+                        android:layout_margin="5dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size14" />
+
+
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                >
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_goal"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/custom_size150"
-                    android:layout_marginTop="30dp"
                     android:background="@drawable/button_bg_new"
                     android:fontFamily="@font/roboto_bold"
                     android:text="Goal"
                     android:textAllCaps="false"
+                    android:layout_weight="50"
                     android:textColor="@color/white"
+                    android:layout_margin="5dp"
                     android:textSize="@dimen/text_size14" />
 
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_exp"
+                    android:id="@+id/btn_expence"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/custom_size150"
-                    android:layout_marginTop="30dp"
                     android:background="@drawable/button_bg_new"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Expenses"
+                    android:text="Budget"
+                    android:layout_weight="50"
+                    android:layout_margin="5dp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_size14" />
+            </LinearLayout>
+
             </LinearLayout>
 
         </ScrollView>
