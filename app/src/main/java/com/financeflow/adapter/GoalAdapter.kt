@@ -22,7 +22,7 @@ class GoalAdapter(private val c: Context,) :
     private var promolink : String = "test";
 
     fun setList(userlist1: List<GoalDatum>,) {
-        this.userlist = userlist1
+        this.userlist = userlist1.reversed()
         notifyDataSetChanged()
     }
 
