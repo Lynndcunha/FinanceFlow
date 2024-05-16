@@ -53,6 +53,8 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
     lateinit var loginManager: LoginManager
     lateinit var validation: ValidationUtils
     lateinit var gson : Gson
+    var incomeAmount: Int = 0
+    var expenseAmount: Double = 0.0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -105,37 +107,98 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
         viewModel = ViewModelProviders.of(this).get(CommonViewModel::class.java)
     }
 
+
+    override fun onStart() {
+        super.onStart()
+        if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
+
+            viewModel.FetchIncome(mypref.userid.toString())
+            viewModel.FetchExpense(mypref.userid.toString())
+
+        }
+        else{
+            dialog.warningDialog()
+        }
+
+    }
     fun setupObserver() {
 
-        viewModel.getLogin().observe(this, androidx.lifecycle.Observer {
+
+        viewModel.getIncomeList().observe(this, androidx.lifecycle.Observer {
 
             when (it.status) {
 
                 Status.SUCCESS -> {
                     dialog.hideDialog()
-                    mypref.usertoken = it.data!!.data!!.token
-                    mypref.userid = it.data.data!!.id
+                    /* Glide.with(this).load(it.data!!.data!![0].mainBanner).centerCrop().into(banner1)
+                     competationAdapter.setList(it.data.data!!)*/
+                    incomeAmount =0 ;
+                    it.data?.data?.let {
+                            it1 -> it1.forEach {
+                              incomeAmount = it.income?.get(0)?.incomeAmount?.plus(incomeAmount) ?: 0
+                    }
+                         }
 
-                    Toast.makeText(this, it.data!!.message, Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, IncomeListActivity::class.java)
-                    startActivity(intent)
-                    finish()
+                    btn_Income.setText("Income\n"+"$"+incomeAmount.toString())
+                    Log.d("NOTISIZE:", incomeAmount.toString())
+
 
                 }
                 Status.LOADING -> {
 
                     dialog.showDialog()
-                    //   Toast.makeText(this, "Loading", Toast.LENGTH_LONG).show()
+                    //      Toast.makeText(context, "Loading", Toast.LENGTH_LONG).show()
 
                 }
                 Status.ERROR -> {
                     dialog.hideDialog()
-                    Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                    dialog.showToast(it.message.toString())
 
                 }
             }
 
         })
+
+        viewModel.getExpenseList().observe(this, androidx.lifecycle.Observer {
+
+            when (it.status) {
+
+                Status.SUCCESS -> {
+                    dialog.hideDialog()
+                    expenseAmount = 0.0
+                    /* Glide.with(this).load(it.data!!.data!![0].mainBanner).centerCrop().into(banner1)
+                     competationAdapter.setList(it.data.data!!)*/
+                    Log.d("NOTISIZE:", it.data?.data?.size.toString())
+                    it.data?.data?.let { it1 ->
+
+                        it1.forEach {
+
+                            expenseAmount =
+                                it.amount.toString().toDouble().plus(expenseAmount)
+
+                        }
+
+                    }
+
+                    btn_exp.setText("Expenses\n"+"$"+expenseAmount.toString())
+
+                }
+                Status.LOADING -> {
+
+                    dialog.showDialog()
+                    //      Toast.makeText(context, "Loading", Toast.LENGTH_LONG).show()
+
+                }
+                Status.ERROR -> {
+                    dialog.hideDialog()
+                    dialog.showToast(it.message.toString())
+
+                }
+            }
+
+        })
+
+
 
 
     }
