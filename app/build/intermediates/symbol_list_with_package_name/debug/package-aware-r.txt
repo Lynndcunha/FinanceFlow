@@ -5861,7 +5861,6 @@ string country_zimbabwe_code
 string country_zimbabwe_name
 string country_zimbabwe_number
 string default_progressbar
-string default_web_client_id
 string dialog_cancel
 string dialog_default_title
 string dialog_ok

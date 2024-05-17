@@ -37,7 +37,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         Log.d("token:",token)
         Log.d("SUCC1:", token)
 
-        FirebaseMessaging.getInstance().subscribeToTopic("com.financeflow");
+      //  FirebaseMessaging.getInstance().subscribeToTopic("com.financeflow");
 
         //  SmartPush.getInstance(WeakReference(this)).setDevicePushToken(token)
     }

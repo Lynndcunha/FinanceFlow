@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.dyteclientmobile:webrtc:0.1.13@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab777a724c4c95d1e2d8705cdab36cd5/jetified-webrtc-0.1.13/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab777a724c4c95d1e2d8705cdab36cd5/jetified-webrtc-0.1.13/jars/libs/libjingle_peerconnection.so.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab777a724c4c95d1e2d8705cdab36cd5/jetified-webrtc-0.1.13/jars/libs/libwebrtc.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab777a724c4c95d1e2d8705cdab36cd5/jetified-webrtc-0.1.13/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab777a724c4c95d1e2d8705cdab36cd5/jetified-webrtc-0.1.13/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/283b1ad21827c5779520393943df1fe9/jetified-webrtc-0.1.13/jars/libs/libjingle_peerconnection.so.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/283b1ad21827c5779520393943df1fe9/jetified-webrtc-0.1.13/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/283b1ad21827c5779520393943df1fe9/jetified-webrtc-0.1.13/jars/libs/libwebrtc.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/283b1ad21827c5779520393943df1fe9/jetified-webrtc-0.1.13/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/283b1ad21827c5779520393943df1fe9/jetified-webrtc-0.1.13/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

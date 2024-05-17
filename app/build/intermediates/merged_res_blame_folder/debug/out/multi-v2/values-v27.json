@@ -4,7 +4,7 @@
             "outputFile": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v27/values-v27.xml",
             "map": [
                 {
-                    "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/8ffc5e2d51e8dca9a2086b0cf5e84065/jetified-upisdk-1.5.3/res/values-v27/values-v27.xml",
+                    "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/2491c6883dd580ab28aa980a671ce18d/jetified-upisdk-1.5.3/res/values-v27/values-v27.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: com.dyteclientmobile:library:0.20.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3151c67fa2bee902ab9fa6cbc7b5a898/jetified-library-0.20.1/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3151c67fa2bee902ab9fa6cbc7b5a898/jetified-library-0.20.1/jars/libs/classes-2.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3151c67fa2bee902ab9fa6cbc7b5a898/jetified-library-0.20.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3151c67fa2bee902ab9fa6cbc7b5a898/jetified-library-0.20.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6cae58d1edba9ac08ae3abd0408d2c2b/jetified-library-0.20.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6cae58d1edba9ac08ae3abd0408d2c2b/jetified-library-0.20.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6cae58d1edba9ac08ae3abd0408d2c2b/jetified-library-0.20.1/jars/libs/classes-2.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6cae58d1edba9ac08ae3abd0408d2c2b/jetified-library-0.20.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

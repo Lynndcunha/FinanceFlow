@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.dyteclientmobile:sdk:0.20.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0e6fdb0a357d72fe1aa7295aa3fb2471/jetified-sdk-0.20.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0e6fdb0a357d72fe1aa7295aa3fb2471/jetified-sdk-0.20.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0e6fdb0a357d72fe1aa7295aa3fb2471/jetified-sdk-0.20.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e3e07963574f179eed1af87e66452360/jetified-sdk-0.20.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e3e07963574f179eed1af87e66452360/jetified-sdk-0.20.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e3e07963574f179eed1af87e66452360/jetified-sdk-0.20.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

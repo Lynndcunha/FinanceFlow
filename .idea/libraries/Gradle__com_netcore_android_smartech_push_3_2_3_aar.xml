@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.netcore.android:smartech-push:3.2.3@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/481cbf87eef5d2d3487226b8f5b938a7/jetified-smartech-push-3.2.3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/481cbf87eef5d2d3487226b8f5b938a7/jetified-smartech-push-3.2.3/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/481cbf87eef5d2d3487226b8f5b938a7/jetified-smartech-push-3.2.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e849831bf4ed0790ac82242c10c1ee65/jetified-smartech-push-3.2.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e849831bf4ed0790ac82242c10c1ee65/jetified-smartech-push-3.2.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e849831bf4ed0790ac82242c10c1ee65/jetified-smartech-push-3.2.3/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

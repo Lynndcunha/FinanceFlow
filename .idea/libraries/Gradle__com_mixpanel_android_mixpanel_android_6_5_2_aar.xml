@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.mixpanel.android:mixpanel-android:6.5.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/641e37817bc73c98272d54624a9d0bae/jetified-mixpanel-android-6.5.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/641e37817bc73c98272d54624a9d0bae/jetified-mixpanel-android-6.5.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e57eccb375078b7aa68a7ebc0f9a527/jetified-mixpanel-android-6.5.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e57eccb375078b7aa68a7ebc0f9a527/jetified-mixpanel-android-6.5.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mixpanel.android/mixpanel-android/6.5.2/3f95ed36047da74b587f2ae9b5a6da102281f158/mixpanel-android-6.5.2-javadoc.jar!/" />

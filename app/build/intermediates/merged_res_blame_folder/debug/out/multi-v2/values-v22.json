@@ -4,7 +4,7 @@
             "outputFile": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/82590d8257368aeafcc8f71c5c213d84/jetified-payu-custom-browser-7.9.0/res/values-v22/values-v22.xml",
+                    "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/b2dd78ece3df1278f424e167bd5b4318/jetified-payu-custom-browser-7.9.0/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/acc5c5a5c67d506e8ace5ba99057744b/appcompat-1.3.1/res/values-v22/values-v22.xml",
+                    "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/41a6f8c916c29f8cf2bf7fa1dea2278e/appcompat-1.3.1/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

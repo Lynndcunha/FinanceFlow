@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">370229327249-neaa615c8kmqqtp148hhshm3kqesv1jn.apps.googleusercontent.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">370229327249</string>
-    <string name="google_api_key" translatable="false">AIzaSyABOzrTumdcgo-EsCCPNsV1t40AgdIYw44</string>
-    <string name="google_app_id" translatable="false">1:370229327249:android:46eb94230d99d1c9279630</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyABOzrTumdcgo-EsCCPNsV1t40AgdIYw44</string>
-    <string name="google_storage_bucket" translatable="false">androidcelebrityschool.appspot.com</string>
-    <string name="project_id" translatable="false">androidcelebrityschool</string>
+    <string name="gcm_defaultSenderId" translatable="false">1030603551252</string>
+    <string name="google_api_key" translatable="false">AIzaSyDVtRiWn6HImeOdeC6P0Ci_BqV143a0VlE</string>
+    <string name="google_app_id" translatable="false">1:1030603551252:android:0961e46d24447c0179ad01</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDVtRiWn6HImeOdeC6P0Ci_BqV143a0VlE</string>
+    <string name="google_storage_bucket" translatable="false">financeflow-3abcd.appspot.com</string>
+    <string name="project_id" translatable="false">financeflow-3abcd</string>
 </resources>

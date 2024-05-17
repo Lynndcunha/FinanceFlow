@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.netcore.android:smartech-sdk:3.2.8@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d3c2e5632269e48ac2d8140f14668801/jetified-smartech-sdk-3.2.8/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba71f22b067a2460bc2780ae57457ff8/jetified-smartech-sdk-3.2.8/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d3c2e5632269e48ac2d8140f14668801/jetified-smartech-sdk-3.2.8/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d3c2e5632269e48ac2d8140f14668801/jetified-smartech-sdk-3.2.8/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d3c2e5632269e48ac2d8140f14668801/jetified-smartech-sdk-3.2.8/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba71f22b067a2460bc2780ae57457ff8/jetified-smartech-sdk-3.2.8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba71f22b067a2460bc2780ae57457ff8/jetified-smartech-sdk-3.2.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ba71f22b067a2460bc2780ae57457ff8/jetified-smartech-sdk-3.2.8/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
