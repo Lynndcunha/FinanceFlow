@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.financeflow.R
+import com.financeflow.model.BudgetData
 import com.financeflow.model.ExpenseDatum
+import com.financeflow.model.NotiData
 import com.financeflow.screen.UpdateExpenseActivity
 import com.financeflow.screen.UpdateGoalActivity
 import kotlinx.android.synthetic.main.item_budgetadapter.view.budget
@@ -19,7 +21,7 @@ import java.io.Serializable
 
 class NotificationAdapter(private val c: Context,) :
     RecyclerView.Adapter<NotificationAdapter.BeatsViewHolder>() {
-    private var userlist: List<ExpenseDatum>? = null
+    private var userlist: List<NotiData>? = null
     private var userId: Int = 0
     private var promolink : String = "test";
 
@@ -32,10 +34,17 @@ class NotificationAdapter(private val c: Context,) :
 
     }
 
+    fun setList(userlist1: List<NotiData>) {
+        this.userlist = userlist1.reversed()
+        notifyDataSetChanged()
+    }
 
     override fun getItemCount(): Int {
 
-        return 6
+        if (userlist != null) {
+            return userlist!!.size
+        }
+        return 0
     }
 
     override fun onBindViewHolder(holder: BeatsViewHolder, position: Int) {
@@ -79,7 +88,8 @@ class NotificationAdapter(private val c: Context,) :
             )
         }*/
 
-
+        holder.mName.text = userlist!!.get(position).title!!.trim()
+        holder.mName1.text = userlist!!.get(position).body!!.trim()
 
 
     }
@@ -87,16 +97,20 @@ class NotificationAdapter(private val c: Context,) :
     inner class BeatsViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 
 
-        /*var mDate: TextView
-         var mDur: TextView
-        var avrimg: CircleImageView
-       var mlastime: TextView*/
+        var mName: TextView
+        var mName1: TextView
+
+        /*var mDur: TextView
+       var avrimg: CircleImageView
+      var mlastime: TextView*/
 
 
         init {
-           /* mName = v.txt_title1
-            avrimg = v.avatar
-            mlastime = v.txt_time*/
+           mName = v.budget
+            mName1 = v.budget1
+
+            /*  avrimg = v.avatar
+             mlastime = v.txt_time*/
 
 
             /*mDate = v.item_date

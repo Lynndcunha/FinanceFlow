@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 
 class PrefManager(context: Context) {
     private var PRIVATE_MODE = 0
-    private val PREF_NAME = "Ekeeda_New"
+    private val PREF_NAME = "FINANCE_FLOW"
     val MYTOKEN = "token"
     val MYEMAIL = "email"
     val MYPHONE = "phone"

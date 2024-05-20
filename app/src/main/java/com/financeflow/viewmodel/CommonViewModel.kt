@@ -33,6 +33,7 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     var expensemodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
     var expenselistmodel : MutableLiveData<Resource<ExpenseListesponseModel>> = MutableLiveData()
     var expenseupdatebudgetmodel : MutableLiveData<Resource<expenseupdateBudgetModel>> = MutableLiveData()
+    var notificationlistmodel : MutableLiveData<Resource<NotificationListesponseModel>> = MutableLiveData()
 
 
 
@@ -575,6 +576,50 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     }
 
 
+    fun FetchNotification(userid: String){
+
+        notificationlistmodel.postValue(Resource.loading(null))
+
+        val call: Call<NotificationListesponseModel> = RetrofitBuilder.apiService.GETNOTIFICATION(userid)
+        call.enqueue(object : Callback<NotificationListesponseModel> {
+
+            override fun onResponse(call: Call<NotificationListesponseModel>?, response: Response<NotificationListesponseModel>?) {
+
+                Log.d("RES",response.toString());
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        notificationlistmodel.postValue(Resource.success(response?.body()) as Resource<NotificationListesponseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        notificationlistmodel.postValue(Resource.error(null, "No data found"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        notificationlistmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        notificationlistmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<NotificationListesponseModel>?, t: Throwable?) {
+
+                notificationlistmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
     fun SaveIncome(signupReqModel: IncomeReqModel){
 
         incomemodel.postValue(Resource.loading(null))
@@ -812,6 +857,10 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
         return incomemodel
     }
 
+
+    fun getNotification(): LiveData<Resource<NotificationListesponseModel>> {
+        return notificationlistmodel
+    }
 
     fun getSaveGoal(): LiveData<Resource<GoalModel>> {
         return goalmodel

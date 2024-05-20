@@ -2,14 +2,19 @@ package com.financeflow.screen
 
 import CommonViewModel
 import Status
+import android.Manifest
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProviders
 import com.financeflow.R
 import com.financeflow.application.Myapp
@@ -79,6 +84,15 @@ class LoginActivity :BaseActivity(), View.OnClickListener {
         setupViewModel()
         setupObserver()
 
+        if (Build.VERSION.SDK_INT >= 33) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.POST_NOTIFICATIONS),101);
+            }
+            else {
+               // createChannel();
+            }
+        }
+
 
     }
 
@@ -94,8 +108,8 @@ class LoginActivity :BaseActivity(), View.OnClickListener {
 
                 Status.SUCCESS -> {
                     dialog.hideDialog()
-                    mypref.usertoken = it.data!!.data!!.token
-                    mypref.userid = it.data.data!!.id
+                  //  mypref.usertoken = it.data!!.data!!.token
+                    mypref.userid = it.data!!.data!!.id
 
                     Toast.makeText(this, it.data!!.message, Toast.LENGTH_LONG).show()
                     val intent = Intent(this, HomeActivity::class.java)
@@ -149,6 +163,7 @@ class LoginActivity :BaseActivity(), View.OnClickListener {
                             val loginReqModel = LoginReqModel(
                                 edtxt_email.text.toString(),
                                 edtxt_pass.text.toString(),
+                                mypref.usertoken.toString()
                             )
                             viewModel.Login(loginReqModel)
                         }

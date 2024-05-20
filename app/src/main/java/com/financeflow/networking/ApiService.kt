@@ -71,6 +71,8 @@ interface ApiService {
     @POST("user/edit-expense")
     fun UPDATEEXPENSE(@Body signupReqModel: ExpenseUpdateReqModel ): Call<expenseupdateBudgetModel>
 
+    @GET("user/notification")
+    fun GETNOTIFICATION(@Query("userId") userId:String ): Call<NotificationListesponseModel>
 
 
 }

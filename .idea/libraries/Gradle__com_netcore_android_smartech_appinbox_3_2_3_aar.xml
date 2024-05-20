@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.netcore.android:smartech-appinbox:3.2.3@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff18242ed266329d0114a5a37786935d/jetified-smartech-appinbox-3.2.3/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff18242ed266329d0114a5a37786935d/jetified-smartech-appinbox-3.2.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff18242ed266329d0114a5a37786935d/jetified-smartech-appinbox-3.2.3/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff18242ed266329d0114a5a37786935d/jetified-smartech-appinbox-3.2.3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />

@@ -66,12 +66,22 @@ class NotificationListActivity : AppCompatActivity() {
 
 
 
+        setupViewModel()
+        setupObserver()
 
     }
 
 
     override fun onStart() {
         super.onStart()
+        if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
+
+            viewModel.FetchNotification(mypref.userid.toString())
+
+        }
+        else{
+            dialog.warningDialog()
+        }
 
 
     }
@@ -82,7 +92,7 @@ class NotificationListActivity : AppCompatActivity() {
 
     fun setupObserver() {
 
-       viewModel.getExpenseList().observe(this, androidx.lifecycle.Observer {
+       viewModel.getNotification().observe(this, androidx.lifecycle.Observer {
 
             when (it.status) {
 
@@ -91,7 +101,7 @@ class NotificationListActivity : AppCompatActivity() {
                    /* Glide.with(this).load(it.data!!.data!![0].mainBanner).centerCrop().into(banner1)
                     competationAdapter.setList(it.data.data!!)*/
                     Log.d("NOTISIZE:", it.data?.data?.size.toString())
-                   // it.data?.data?.let { it1 -> chatAdapter.setList(it1,) }
+                    it.data?.data?.let { it1 -> chatAdapter.setList(it1,) }
 
                 }
                 Status.LOADING -> {

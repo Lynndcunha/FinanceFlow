@@ -80,6 +80,7 @@ class SignupActivity : BaseActivity(), View.OnClickListener {
                                     edtxt_email.text.toString(),
                                     edtxt_name.text.toString(),
                                     edtxt_password.text.toString(),
+                                    mypref.usertoken.toString()
                                 )
 
                                 viewModel.Signup(signupReqModel)

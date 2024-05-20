@@ -42,6 +42,57 @@
 
         </RelativeLayout>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:id="@+id/from_date"
+                android:layout_marginTop="@dimen/custom_size5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/custom_size12"
+                android:drawablePadding="@dimen/custom_size8"
+                android:drawableRight="@mipmap/email"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/text_size12"
+                android:hint="From date"
+                android:singleLine="true"
+                android:textColorHint="@color/label"
+                android:textColor="@color/label"
+                android:inputType="numberDecimal"
+                android:layout_weight="50"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/editxt_bg_new"/>
+
+
+            <TextView
+                android:id="@+id/to_date"
+                android:layout_marginTop="@dimen/custom_size5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/custom_size12"
+                android:drawablePadding="@dimen/custom_size8"
+                android:layout_marginLeft="5dp"
+                android:drawableRight="@mipmap/email"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/text_size12"
+                android:hint="To date"
+                android:layout_weight="50"
+                android:singleLine="true"
+                android:textColorHint="@color/label"
+                android:textColor="@color/label"
+                android:inputType="numberDecimal"
+                android:background="@drawable/editxt_bg_new"/>
+
+
+
+        </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_chat"
         android:layout_width="match_parent"
