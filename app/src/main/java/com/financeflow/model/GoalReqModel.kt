@@ -14,4 +14,4 @@ data class GoalUpdateReqModel ( var id: String, var name: String, var amount: St
 
 data class ExpenseReqModel ( var userId: String, var category: String, var amount: String, )
 
-data class ExpenseUpdateReqModel ( var id: String, var name: String, var amount: String,)
+data class ExpenseUpdateReqModel ( var id: String, var category: String, var amount: String,)

@@ -78,8 +78,8 @@ class LoginActivity :BaseActivity(), View.OnClickListener {
 
         }*/
 
-        edtxt_email.setText("test1@test.com")
-        edtxt_pass.setText("test")
+       /* edtxt_email.setText("test1@test.com")
+        edtxt_pass.setText("test")*/
 
         setupViewModel()
         setupObserver()
