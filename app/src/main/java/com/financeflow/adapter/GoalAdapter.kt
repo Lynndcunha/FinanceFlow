@@ -12,6 +12,7 @@ import com.financeflow.R
 import com.financeflow.model.GoalDatum
 import com.financeflow.screen.UpdateGoalActivity
 import kotlinx.android.synthetic.main.item_budgetadapter.view.budget
+import kotlinx.android.synthetic.main.item_goaladapter.view.budget1
 import java.io.Serializable
 
 
@@ -84,6 +85,7 @@ class GoalAdapter(private val c: Context,) :
         }*/
 
         holder.mName.text = userlist?.get(position)?.name.toString()
+        holder.mName1.text ="$"+userlist?.get(position)?.amount.toString()
 
         holder.itemView.setOnClickListener {
 
@@ -101,6 +103,7 @@ class GoalAdapter(private val c: Context,) :
     inner class BeatsViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 
         var mName: TextView
+        var mName1: TextView
 
         /*var mDate: TextView
          var mDur: TextView
@@ -114,6 +117,9 @@ class GoalAdapter(private val c: Context,) :
             mlastime = v.txt_time*/
 
              mName = v.budget
+            mName1 = v.budget1
+
+
             /*mDate = v.item_date
             mDur = v.item_duration
             share1 = v.share
