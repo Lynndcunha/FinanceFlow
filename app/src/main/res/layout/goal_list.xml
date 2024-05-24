@@ -42,6 +42,21 @@
 
         </RelativeLayout>
 
+        <EditText
+            android:id="@+id/edtxt_searchg"
+            android:layout_marginTop="@dimen/custom_size5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/custom_size12"
+            android:drawablePadding="@dimen/custom_size8"
+            android:drawableRight="@drawable/search"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/text_size12"
+            android:hint="Search here"
+            android:singleLine="true"
+            android:textColorHint="@color/label"
+            android:textColor="@color/label"
+            android:background="@drawable/editxt_bg_new"/>
 
         <LinearLayout
             android:layout_width="match_parent"

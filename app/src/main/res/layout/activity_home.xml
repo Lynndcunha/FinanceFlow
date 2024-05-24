@@ -17,9 +17,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/custom_size20"
+        android:layout_marginTop="@dimen/custom_size5"
         >
 
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/logout" />
 
 
         <TextView
@@ -29,6 +39,8 @@
             android:text="FINANCE FLOW"
             android:textColor="@color/white"
             android:layout_centerHorizontal="true"
+            android:layout_below="@+id/logout"
+            android:layout_marginTop="@dimen/custom_size10"
             android:textSize="@dimen/text_size20" />
 
 
@@ -38,12 +50,12 @@
             android:layout_height="28dp"
             android:layout_centerInParent="true"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-
+            android:layout_marginTop="13dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
             android:layout_toLeftOf="@+id/profile"
+            android:layout_below="@+id/logout"
             android:src="@drawable/ic_notification" />
 
         <ImageView
@@ -53,6 +65,8 @@
             android:layout_centerInParent="true"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="5dp"
+            android:layout_below="@+id/logout"
+            android:layout_marginTop="13dp"
             android:src="@drawable/ic_acc" />
 
 
@@ -63,6 +77,7 @@
             android:layout_marginBottom="5dp"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/custom_size20"
             android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_marginTop="@dimen/custom_size20"

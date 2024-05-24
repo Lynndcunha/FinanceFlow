@@ -5,6 +5,8 @@ import android.app.DatePickerDialog
 import android.content.Intent
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DefaultItemAnimator
@@ -21,6 +23,7 @@ import com.financeflow.R
 import com.financeflow.adapter.BudgetAdapter
 import com.financeflow.model.BudgetData
 import com.financeflow.model.GoalDatum
+import com.financeflow.model.IData
 import com.financeflow.util.PrefManager
 import com.financeflow.utils.CustomDialog
 import com.financeflow.utils.NetworkUtil
@@ -29,6 +32,7 @@ import kotlinx.android.synthetic.main.budget_list.recycler_chat
 import kotlinx.android.synthetic.main.budget_list.to_date
 import kotlinx.android.synthetic.main.budget_list.txt_back
 import kotlinx.android.synthetic.main.income_list.btn_add
+import kotlinx.android.synthetic.main.income_list.edtxt_search
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -91,6 +95,8 @@ class BudgetListActivity : AppCompatActivity() {
 
             showDatePicker("to")
         }
+
+
 
 
     }

@@ -6,6 +6,8 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.provider.CalendarContract.Events
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -15,14 +17,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.financeflow.R
 import com.financeflow.adapter.GoalAdapter
 import com.financeflow.model.GoalDatum
+import com.financeflow.model.IData
 import com.financeflow.util.PrefManager
 import com.financeflow.utils.CustomDialog
 import com.financeflow.utils.NetworkUtil
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.budget_list.recycler_chat
+import kotlinx.android.synthetic.main.goal_list.edtxt_searchg
 import kotlinx.android.synthetic.main.goal_list.from_date
 import kotlinx.android.synthetic.main.goal_list.to_date
 import kotlinx.android.synthetic.main.income_list.btn_add
+import kotlinx.android.synthetic.main.income_list.edtxt_search
 import kotlinx.android.synthetic.main.income_list.txt_back
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -89,6 +94,14 @@ class GoalListActivity : AppCompatActivity() {
 
             showDatePicker("to")
         }
+
+        edtxt_searchg.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: Editable) {
+                filterEvents(s.toString())
+            }
+        })
 
 
     }
@@ -214,6 +227,13 @@ class GoalListActivity : AppCompatActivity() {
       //  adapter.filter(futureEvents)
     }
 
+    fun filterEvents(text:String) {
 
+        var futureEvents: List<GoalDatum> = goallist!!.filter { s -> s.name!!.contains(text) }
+
+        chatAdapter.setList(futureEvents)
+        Log.d("SIZE:",futureEvents.size.toString())
+        //  adapter.filter(futureEvents)
+    }
 
 }

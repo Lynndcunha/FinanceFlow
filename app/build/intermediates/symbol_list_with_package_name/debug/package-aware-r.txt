@@ -3107,6 +3107,7 @@ drawable layout_bg
 drawable lock_icon
 drawable logo_payu
 drawable logoicon_new
+drawable logout
 drawable main_layout_bg
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
@@ -3360,6 +3361,8 @@ drawable rounded_background
 drawable rounded_textview
 drawable sbi
 drawable scblogo
+drawable search
+drawable search_view_background
 drawable seekbar_bg
 drawable seekbar_progress
 drawable seekbar_shadow
@@ -3728,6 +3731,9 @@ id edtxt_password
 id edtxt_phone
 id edtxt_rent
 id edtxt_saving
+id edtxt_search
+id edtxt_searche
+id edtxt_searchg
 id edtxt_send
 id edtxt_source
 id edtxt_subscr
@@ -6500,6 +6506,8 @@ style CardView
 style CardView_Dark
 style CardView_Light
 style CustomAlertDialog
+style CustomSearchViewStyle
+style CustomSearchViewText
 style DialogAnimationFade
 style DialogAnimationSlide
 style EmptyTheme

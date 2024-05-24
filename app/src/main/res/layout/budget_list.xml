@@ -40,6 +40,8 @@
             android:textSize="@dimen/text_size25" />
         </RelativeLayout>
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

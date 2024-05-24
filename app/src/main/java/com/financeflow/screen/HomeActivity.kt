@@ -34,6 +34,7 @@ import kotlinx.android.synthetic.main.activity_home.btn_Income
 import kotlinx.android.synthetic.main.activity_home.btn_exp
 import kotlinx.android.synthetic.main.activity_home.btn_expence
 import kotlinx.android.synthetic.main.activity_home.btn_goal
+import kotlinx.android.synthetic.main.activity_home.logout
 import kotlinx.android.synthetic.main.activity_home.noti
 import kotlinx.android.synthetic.main.activity_home.profile
 import kotlinx.android.synthetic.main.activity_login.*
@@ -83,6 +84,16 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
 
         }*/
 
+
+        logout.setOnClickListener {
+
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent)
+            finish()
+
+        }
         noti.setOnClickListener {
 
             val intent = Intent(this, NotificationListActivity::class.java)
