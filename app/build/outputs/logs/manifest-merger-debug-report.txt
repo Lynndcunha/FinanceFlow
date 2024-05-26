@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-197:12
-INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-197:12
-INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-197:12
-INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-197:12
+ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-208:12
+INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-208:12
+INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-208:12
+INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-208:12
 MERGED from [com.github.abdularis:circularimageview:1.5] /Users/admin/.gradle/caches/transforms-2/files-2.1/524dc3f939ff25198bd33d869abcae7f/jetified-circularimageview-1.5/AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.EleshBaraiya:Phonic-Player:0.1] /Users/admin/.gradle/caches/transforms-2/files-2.1/a3a6c9fea1bceeb084004542867453d4/jetified-Phonic-Player-0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [in.payu:payu-checkout-pro:1.7.3] /Users/admin/.gradle/caches/transforms-2/files-2.1/ace38cbcde2678acac9d5853d98361e6/jetified-payu-checkout-pro-1.7.3/AndroidManifest.xml:2:1-13:12
@@ -174,22 +174,22 @@ MERGED from [com.facebook.fresco:ui-common:2.5.0] /Users/admin/.gradle/caches/tr
 MERGED from [com.facebook.fresco:soloader:2.5.0] /Users/admin/.gradle/caches/transforms-2/files-2.1/6b7da5fdb85de3b94830d969d2788a55/jetified-soloader-2.5.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/admin/.gradle/caches/transforms-2/files-2.1/583e070e3ac00a0f9f03c9925d59c8d4/jetified-soloader-0.10.3/AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.5.0] /Users/admin/.gradle/caches/transforms-2/files-2.1/1784432e1c5e69fef4a8527fc4621106/jetified-fbcore-2.5.0/AndroidManifest.xml:2:1-9:12
-INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-197:12
-INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-197:12
-INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-197:12
+INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-208:12
+INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-208:12
+INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-208:12
 	package
 		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:4:5-30
 		INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml
-		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-197:12
+		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-208:12
 		INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml
-		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-197:12
+		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:1-208:12
 		INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:2:11-69
@@ -322,7 +322,7 @@ ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/ma
 	android:name
 		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:25:21-105
 application
-ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:30:5-195:19
+ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:30:5-206:19
 MERGED from [in.payu:payu-checkout-pro-ui:1.7.2] /Users/admin/.gradle/caches/transforms-2/files-2.1/747d70b4e9e085314d9eb074fa9bc617/jetified-payu-checkout-pro-ui-1.7.2/AndroidManifest.xml:15:5-25:19
 MERGED from [in.payu:payu-checkout-pro-ui:1.7.2] /Users/admin/.gradle/caches/transforms-2/files-2.1/747d70b4e9e085314d9eb074fa9bc617/jetified-payu-checkout-pro-ui-1.7.2/AndroidManifest.xml:15:5-25:19
 MERGED from [com.netcore.android:smartech-appinbox:3.2.3] /Users/admin/.gradle/caches/transforms-2/files-2.1/ff18242ed266329d0114a5a37786935d/jetified-smartech-appinbox-3.2.3/AndroidManifest.xml:11:5-17:19
@@ -692,6 +692,22 @@ ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/ma
 		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:190:13-36
 	android:name
 		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:188:19-72
+activity#com.financeflow.screen.SplitListActivity
+ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:194:9-198:15
+	android:screenOrientation
+		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:195:13-49
+	android:exported
+		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:196:13-36
+	android:name
+		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:194:19-74
+activity#com.financeflow.screen.SplitAddActivity
+ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:200:9-204:15
+	android:screenOrientation
+		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:201:13-49
+	android:exported
+		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:202:13-36
+	android:name
+		ADDED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml:200:19-73
 uses-sdk
 INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/src/main/AndroidManifest.xml

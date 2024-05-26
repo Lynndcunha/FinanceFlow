@@ -34,6 +34,11 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     var expenselistmodel : MutableLiveData<Resource<ExpenseListesponseModel>> = MutableLiveData()
     var expenseupdatebudgetmodel : MutableLiveData<Resource<expenseupdateBudgetModel>> = MutableLiveData()
     var notificationlistmodel : MutableLiveData<Resource<NotificationListesponseModel>> = MutableLiveData()
+    var pendinglistmodel : MutableLiveData<Resource<PendingListesponseModel>> = MutableLiveData()
+    var paidlistmodel : MutableLiveData<Resource<PaidListesponseModel>> = MutableLiveData()
+    var userlistmodel : MutableLiveData<Resource<UserListesponseModel>> = MutableLiveData()
+    var transmodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
+    var settelmodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
 
 
 
@@ -263,6 +268,94 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
 
     }
 
+    fun SaveTransaction(signupReqModel: CreatetransactionReqModel){
+
+        transmodel.postValue(Resource.loading(null))
+
+        val call: Call<ExpenseModel> = RetrofitBuilder.apiService.SAVETRAN(signupReqModel)
+        call.enqueue(object : Callback<ExpenseModel> {
+
+            override fun onResponse(call: Call<ExpenseModel>?, response: Response<ExpenseModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        transmodel.postValue(Resource.success(response?.body()) as Resource<ExpenseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        transmodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        transmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        transmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ExpenseModel>?, t: Throwable?) {
+
+                transmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun SettelTransaction(signupReqModel: SetteltransactionReqModel){
+
+        settelmodel.postValue(Resource.loading(null))
+
+        val call: Call<ExpenseModel> = RetrofitBuilder.apiService.SETTELTRAN(signupReqModel)
+        call.enqueue(object : Callback<ExpenseModel> {
+
+            override fun onResponse(call: Call<ExpenseModel>?, response: Response<ExpenseModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        settelmodel.postValue(Resource.success(response?.body()) as Resource<ExpenseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        settelmodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        settelmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        settelmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ExpenseModel>?, t: Throwable?) {
+
+                settelmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
 
     fun UpdateBudget(signupReqModel: UpdateBudgetReqModel){
 
@@ -525,6 +618,141 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
             override fun onFailure(call: Call<GoalListesponseModel>?, t: Throwable?) {
 
                 goallistmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun FetchUserlist(){
+
+        userlistmodel.postValue(Resource.loading(null))
+
+        val call: Call<UserListesponseModel> = RetrofitBuilder.apiService.GETUSERLIST()
+        call.enqueue(object : Callback<UserListesponseModel> {
+
+            override fun onResponse(call: Call<UserListesponseModel>?, response: Response<UserListesponseModel>?) {
+
+                Log.d("RES",response.toString());
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        userlistmodel.postValue(Resource.success(response?.body()) as Resource<UserListesponseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        userlistmodel.postValue(Resource.error(null, "No data found"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        userlistmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        userlistmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<UserListesponseModel>?, t: Throwable?) {
+
+                userlistmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+    fun PendingList(userid: String){
+
+        pendinglistmodel.postValue(Resource.loading(null))
+
+        val call: Call<PendingListesponseModel> = RetrofitBuilder.apiService.GETPENDING(userid)
+        call.enqueue(object : Callback<PendingListesponseModel> {
+
+            override fun onResponse(call: Call<PendingListesponseModel>?, response: Response<PendingListesponseModel>?) {
+
+                Log.d("RES",response.toString());
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == 1) {
+                        pendinglistmodel.postValue(Resource.success(response?.body()) as Resource<PendingListesponseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == 0) {
+                        pendinglistmodel.postValue(Resource.error(null, "No data found"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        pendinglistmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        pendinglistmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<PendingListesponseModel>?, t: Throwable?) {
+
+                pendinglistmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+
+    fun PaidList(userid: String){
+
+        paidlistmodel.postValue(Resource.loading(null))
+
+        val call: Call<PaidListesponseModel> = RetrofitBuilder.apiService.GETPAID(userid)
+        call.enqueue(object : Callback<PaidListesponseModel> {
+
+            override fun onResponse(call: Call<PaidListesponseModel>?, response: Response<PaidListesponseModel>?) {
+
+                Log.d("RES",response.toString());
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == 1) {
+                        paidlistmodel.postValue(Resource.success(response?.body()) as Resource<PaidListesponseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == 0) {
+                        paidlistmodel.postValue(Resource.error(null, "No data found"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        paidlistmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        paidlistmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<PaidListesponseModel>?, t: Throwable?) {
+
+                paidlistmodel.postValue(Resource.error(null,"something went wrong"))
             }
 
         })
@@ -840,6 +1068,23 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     }
 
 
+
+    fun getSetTrans(): LiveData<Resource<ExpenseModel>> {
+        return settelmodel
+    }
+    fun getTrans(): LiveData<Resource<ExpenseModel>> {
+        return transmodel
+    }
+    fun getUserLsit(): LiveData<Resource<UserListesponseModel>> {
+        return userlistmodel
+    }
+    fun getPending(): LiveData<Resource<PendingListesponseModel>> {
+        return pendinglistmodel
+    }
+
+    fun getPaid(): LiveData<Resource<PaidListesponseModel>> {
+        return paidlistmodel
+    }
     fun getLogin(): LiveData<Resource<LoginModel>> {
         return loginmodel
     }

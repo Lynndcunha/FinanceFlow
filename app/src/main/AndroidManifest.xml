@@ -191,6 +191,17 @@
 
             />
 
+        <activity android:name="com.financeflow.screen.SplitListActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
+        <activity android:name="com.financeflow.screen.SplitAddActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
 
     </application>
 

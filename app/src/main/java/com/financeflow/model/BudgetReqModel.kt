@@ -20,3 +20,9 @@ data class UpdateBudgetReqModel (var id: String, var rent: String,
                            var savings: String, var subscriptions: String,
                            var others: String,
 )
+
+
+data class CreatetransactionReqModel (var amount: String, var title: String,var users : List<String>,var userId : String)
+
+
+data class SetteltransactionReqModel (var transactionId : String)

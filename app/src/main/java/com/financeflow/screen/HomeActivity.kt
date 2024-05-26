@@ -34,10 +34,12 @@ import kotlinx.android.synthetic.main.activity_home.btn_Income
 import kotlinx.android.synthetic.main.activity_home.btn_exp
 import kotlinx.android.synthetic.main.activity_home.btn_expence
 import kotlinx.android.synthetic.main.activity_home.btn_goal
+import kotlinx.android.synthetic.main.activity_home.btn_split
 import kotlinx.android.synthetic.main.activity_home.logout
 import kotlinx.android.synthetic.main.activity_home.noti
 import kotlinx.android.synthetic.main.activity_home.profile
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.split_list.request
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.*
@@ -75,6 +77,7 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
         btn_expence.setOnClickListener { onClick(btn_expence) }
         btn_goal.setOnClickListener { onClick(btn_goal) }
         btn_exp.setOnClickListener { onClick(btn_exp) }
+        btn_split.setOnClickListener { onClick(btn_split) }
 
         //fb.setOnClickListener { onClick(fb) }
         //google.setOnClickListener { onClick(google) }
@@ -107,6 +110,7 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
             startActivity(intent)
 
         }
+
 
         setupViewModel()
         setupObserver()
@@ -232,6 +236,10 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
             }
             R.id.btn_exp -> {
                 val intent = Intent(this, ExpenseListActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.btn_split -> {
+                val intent = Intent(this, SplitListActivity::class.java)
                 startActivity(intent)
             }
         }

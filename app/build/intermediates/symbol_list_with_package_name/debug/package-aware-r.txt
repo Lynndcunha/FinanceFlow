@@ -2697,6 +2697,7 @@ drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable compt
+drawable custom_radio_button
 drawable custom_recycle
 drawable customprogressbar
 drawable dateicon
@@ -3093,6 +3094,7 @@ drawable icon_recording_stop
 drawable idbi
 drawable imgselector
 drawable inbox_background_bottom_rounded
+drawable income
 drawable induslogo
 drawable ing_logo
 drawable itemimg1
@@ -3163,6 +3165,7 @@ drawable now
 drawable otp_button_selector
 drawable otp_icon_large
 drawable otp_icon_over
+drawable outarrow
 drawable password_icon_large
 drawable password_icon_over
 drawable payu_add_icon
@@ -3347,11 +3350,14 @@ drawable payu_yes_bank
 drawable payu_yespay
 drawable payu_zar
 drawable pin_button_selector
+drawable pink_out_line
 drawable placeholder
 drawable play_pause_bg
 drawable popup_background
 drawable progressbar
 drawable progressbar_new
+drawable radio_button_checked
+drawable radio_button_unchecked
 drawable rectangle
 drawable rectangle_box
 drawable red_button_background
@@ -3384,6 +3390,7 @@ drawable tag_bg
 drawable test1
 drawable test_custom_background
 drawable testimg
+drawable toggle_widget_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable transaction_successful
@@ -3554,7 +3561,10 @@ id btn_exp
 id btn_expence
 id btn_goal
 id btn_login
+id btn_pay
 id btn_singup
+id btn_split
+id btn_split_save
 id budget
 id budget1
 id button
@@ -3737,6 +3747,8 @@ id edtxt_searchg
 id edtxt_send
 id edtxt_source
 id edtxt_subscr
+id edtxts_amount
+id edtxts_source
 id elastic
 id empName
 id end
@@ -4062,6 +4074,7 @@ id notification_main_column_container
 id notifications_list
 id nowrap
 id off
+id offer
 id offersContainer
 id on
 id one
@@ -4076,6 +4089,8 @@ id overshoot
 id packed
 id paddedLinearLayout
 id page
+id paid
+id paid1
 id parallax
 id parent
 id parentPanel
@@ -4129,11 +4144,16 @@ id rcvSavedCards
 id react_test_id
 id rectangles
 id recycler_chat
+id recycler_paid
+id recycler_request
+id recycler_split
 id recycler_view_category
 id regenerate_layout
 id regenerate_text
 id relativeLayout
 id relitive
+id request
+id requested
 id restart
 id retry
 id retry_text
@@ -4358,6 +4378,10 @@ id titleDividerNoCustom
 id title_template
 id title_text
 id title_tv
+id titleamount
+id titleby
+id titledate
+id titlename
 id to_date
 id toggle
 id toolbar_layout_left
@@ -4519,6 +4543,7 @@ id unlabeled
 id up
 id upi_progressBar
 id useLogo
+id username
 id v_audio_ll
 id v_audio_rl
 id v_payu_cb_horizontal_line
@@ -4727,6 +4752,9 @@ layout item_budgetadapter
 layout item_goaladapter
 layout item_layout_order_detail
 layout item_notificationadapter
+layout item_paidadapter
+layout item_requestadapter
+layout item_splitadapter
 layout layout_custom_toolbar_menu
 layout layout_delete_saved_option
 layout layout_emi_tenure
@@ -4854,6 +4882,8 @@ layout smt_inbox_simple_message_layout
 layout smt_item_loading
 layout smt_layout_action_button
 layout splash
+layout split_add
+layout split_list
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -6506,6 +6536,7 @@ style CardView
 style CardView_Dark
 style CardView_Light
 style CustomAlertDialog
+style CustomRadioButton
 style CustomSearchViewStyle
 style CustomSearchViewText
 style DialogAnimationFade

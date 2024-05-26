@@ -217,6 +217,14 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.financeflow.screen.SplitListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.financeflow.screen.SplitAddActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.payu.ui.view.activities.CheckoutActivity"
             android:screenOrientation="portrait" />
 

@@ -63,6 +63,11 @@ interface ApiService {
     @POST("user/create-expense")
     fun SAVEEXPENSE(@Body signupReqModel: ExpenseReqModel): Call<ExpenseModel>
 
+    @POST("user/create-transaction")
+    fun SAVETRAN(@Body signupReqModel: CreatetransactionReqModel): Call<ExpenseModel>
+
+    @POST("user/settle-transaction")
+    fun SETTELTRAN(@Body signupReqModel: SetteltransactionReqModel): Call<ExpenseModel>
 
     @GET("user/list-expense")
     fun GETEXPENSE(@Query("userId") userId:String ): Call<ExpenseListesponseModel>
@@ -74,6 +79,17 @@ interface ApiService {
     @GET("user/notification")
     fun GETNOTIFICATION(@Query("userId") userId:String ): Call<NotificationListesponseModel>
 
+
+    @GET("user/pending-transaction")
+    fun GETPENDING(@Query("userId") userId:String ): Call<PendingListesponseModel>
+
+
+    @GET("user/paid-transaction")
+    fun GETPAID(@Query("userId") userId:String ): Call<PaidListesponseModel>
+
+
+    @GET("user/list")
+    fun GETUSERLIST( ): Call<UserListesponseModel>
 
 }
 

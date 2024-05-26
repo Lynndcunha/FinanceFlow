@@ -161,6 +161,19 @@
                     android:textSize="@dimen/text_size14" />
             </LinearLayout>
 
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_split"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_size150"
+                    android:background="@drawable/button_bg_new"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Split Wise"
+                    android:textAllCaps="false"
+                    android:layout_weight="50"
+                    android:textColor="@color/white"
+                    android:layout_margin="5dp"
+                    android:textSize="@dimen/text_size14" />
+
             </LinearLayout>
 
         </ScrollView>
