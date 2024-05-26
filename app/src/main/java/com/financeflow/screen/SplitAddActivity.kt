@@ -104,15 +104,21 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
 
             if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
 
-                val signupReqModel = CreatetransactionReqModel(
-                    edtxts_amount.text.toString(),
-                    edtxts_source.text.toString(),
-                    UserList,
-                    mypref.userid.toString(),
+                if(UserList.size > 0) {
+                    val signupReqModel = CreatetransactionReqModel(
+                        edtxts_amount.text.toString(),
+                        edtxts_source.text.toString(),
+                        UserList,
+                        mypref.userid.toString(),
 
-                    )
+                        )
 
-                viewModel.SaveTransaction(signupReqModel)
+                    viewModel.SaveTransaction(signupReqModel)
+                }
+                else{
+                    Toast.makeText(this, "please select user", Toast.LENGTH_LONG).show()
+
+                }
             } else {
 
                 dialog.warningDialog()

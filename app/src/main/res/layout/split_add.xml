@@ -67,7 +67,6 @@
             android:textColor="@color/label"
             android:background="@drawable/editxt_bg_new"/>
 
-
         <TextView
             android:layout_marginTop="@dimen/custom_size20"
             android:layout_width="match_parent"
@@ -76,8 +75,9 @@
             android:textColor="@color/label"
             android:fontFamily="@font/roboto_bold"
             android:textSize="@dimen/text_size12"
-
             />
+
+
         <EditText
             android:id="@+id/edtxts_amount"
             android:layout_marginTop="@dimen/custom_size5"

@@ -27,11 +27,11 @@ import com.financeflow.model.IData
 import com.financeflow.util.PrefManager
 import com.financeflow.utils.CustomDialog
 import com.financeflow.utils.NetworkUtil
+import kotlinx.android.synthetic.main.budget_list.btn_add
 import kotlinx.android.synthetic.main.budget_list.from_date
 import kotlinx.android.synthetic.main.budget_list.recycler_chat
 import kotlinx.android.synthetic.main.budget_list.to_date
 import kotlinx.android.synthetic.main.budget_list.txt_back
-import kotlinx.android.synthetic.main.income_list.btn_add
 import kotlinx.android.synthetic.main.income_list.edtxt_search
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -171,6 +171,10 @@ class BudgetListActivity : AppCompatActivity() {
                     Log.d("NOTISIZE:", it.data?.data?.size.toString())
                     it.data?.data?.let { it1 -> chatAdapter.setList(it1)
                     budgetlist = it1
+
+                        if(budgetlist!!.size > 1){
+                            btn_add.visibility = View.GONE
+                        }
                     }
 
                 }
