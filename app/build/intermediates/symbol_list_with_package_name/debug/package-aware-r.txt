@@ -3719,6 +3719,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id edit
 id edit_query
 id edit_vpa
 id edtxt_amount
@@ -4111,6 +4112,7 @@ id pbfetchIfsc
 id peekHeight
 id percent
 id percentText
+id piechart
 id pin
 id pin_layout_gone
 id play_pause
@@ -4678,6 +4680,7 @@ layout activity_payment_response
 layout activity_signup
 layout activity_test1
 layout activity_updatebudget
+layout activity_updategraphbudget
 layout activity_updateincome
 layout add_card_layout
 layout add_net_banking_details_layout

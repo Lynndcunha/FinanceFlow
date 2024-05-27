@@ -203,6 +203,12 @@
 
             />
 
+        <activity android:name="com.financeflow.screen.UpdateGraphBudgetActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
     </application>
 
 </manifest>

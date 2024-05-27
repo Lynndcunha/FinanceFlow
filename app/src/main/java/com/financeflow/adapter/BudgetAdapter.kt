@@ -14,6 +14,7 @@ import com.financeflow.model.BudgetData
 import com.financeflow.screen.BudgetActivity
 import com.financeflow.screen.BudgetListActivity
 import com.financeflow.screen.UpdateBudgetActivity
+import com.financeflow.screen.UpdateGraphBudgetActivity
 import kotlinx.android.synthetic.main.item_budgetadapter.view.budget
 import java.io.Serializable
 
@@ -90,7 +91,7 @@ class BudgetAdapter(private val c: Context,) :
         holder.mName.text = "Budget "+(position+1).toString()
         holder.itemView.setOnClickListener {
 
-            val intent = Intent(c, UpdateBudgetActivity::class.java)
+            val intent = Intent(c, UpdateGraphBudgetActivity::class.java)
             intent.putExtra("value", userlist?.get(position) as Serializable)
             c.startActivity(intent)
 

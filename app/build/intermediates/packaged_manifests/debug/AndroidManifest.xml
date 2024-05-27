@@ -225,6 +225,10 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.financeflow.screen.UpdateGraphBudgetActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.payu.ui.view.activities.CheckoutActivity"
             android:screenOrientation="portrait" />
 
