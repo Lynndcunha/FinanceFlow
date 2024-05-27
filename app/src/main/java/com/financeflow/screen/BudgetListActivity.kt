@@ -173,45 +173,6 @@ class BudgetListActivity : AppCompatActivity() {
                     it.data?.data?.let { it1 -> chatAdapter.setList(it1)
                     budgetlist = it1
 
-                        it1[0].dineOut?.let {
-                            total += it1[0].dineOut!!
-                        }
-                        it1[0].rent?.let {
-                            total += it1[0].rent!!
-                        }
-                        it1[0].electricityBill?.let {
-                            total += it1[0].electricityBill!!
-                        }
-                        it1[0].phoneBill?.let {
-                            total += it1[0].phoneBill!!
-                        }
-                        it1[0].internetBill?.let {
-                            total += it1[0].internetBill!!
-                        }
-                        it1[0].studentLoan?.let {
-                            total += it1[0].studentLoan!!
-                        }
-                        it1[0].grocery?.let {
-                            total += it1[0].grocery!!
-                        }
-                        it1[0].gym?.let {
-                            total += it1[0].gym!!
-                        }
-                        it1[0].dineOut?.let {
-                            total += it1[0].dineOut!!
-                        }
-                        it1[0].savings?.let {
-                            total += it1[0].savings!!
-                        }
-                        it1[0].subscriptions?.let {
-                            total += it1[0].subscriptions!!
-                        }
-                        it1[0].others?.let {
-                            total += it1[0].others!!
-                        }
-
-
-
                         if(budgetlist!!.size > 0){
                             btn_add.visibility = View.GONE
                         }
