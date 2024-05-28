@@ -3853,6 +3853,7 @@ id help_view
 id hideable
 id home
 id homeAsUp
+id homepiechart
 id honorRequest
 id horizontal_only
 id i_payu_close_review

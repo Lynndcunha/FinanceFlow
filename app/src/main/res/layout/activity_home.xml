@@ -86,6 +86,11 @@
                 android:layout_marginLeft="@dimen/custom_size10"
                 android:orientation="vertical">
 
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/homepiechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_size250" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"

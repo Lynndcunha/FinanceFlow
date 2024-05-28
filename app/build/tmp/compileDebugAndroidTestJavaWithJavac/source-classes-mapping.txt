@@ -1,2 +1,0 @@
-com/financeflow/test/BuildConfig.java
- com.financeflow.test.BuildConfig

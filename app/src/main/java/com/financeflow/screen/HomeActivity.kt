@@ -24,6 +24,10 @@ import com.facebook.*
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
 import com.financeflow.model.BudgetModel
+import com.github.mikephil.charting.animation.Easing
+import com.github.mikephil.charting.data.PieData
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -35,10 +39,12 @@ import kotlinx.android.synthetic.main.activity_home.btn_exp
 import kotlinx.android.synthetic.main.activity_home.btn_expence
 import kotlinx.android.synthetic.main.activity_home.btn_goal
 import kotlinx.android.synthetic.main.activity_home.btn_split
+import kotlinx.android.synthetic.main.activity_home.homepiechart
 import kotlinx.android.synthetic.main.activity_home.logout
 import kotlinx.android.synthetic.main.activity_home.noti
 import kotlinx.android.synthetic.main.activity_home.profile
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_updategraphbudget.piechart
 import kotlinx.android.synthetic.main.split_list.request
 import org.json.JSONException
 import org.json.JSONObject
@@ -56,8 +62,12 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
     lateinit var loginManager: LoginManager
     lateinit var validation: ValidationUtils
     lateinit var gson : Gson
-    var incomeAmount: Int = 0
+    var incomeAmount: Double = 0.0
     var expenseAmount: Double = 0.0
+    var total :Double = 0.0
+    val listPie = ArrayList<PieEntry>()
+    val listColors = ArrayList<Int>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -128,7 +138,6 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
         if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
 
             viewModel.FetchIncome(mypref.userid.toString())
-            viewModel.FetchExpense(mypref.userid.toString())
 
         }
         else{
@@ -147,12 +156,15 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
                     dialog.hideDialog()
                     /* Glide.with(this).load(it.data!!.data!![0].mainBanner).centerCrop().into(banner1)
                      competationAdapter.setList(it.data.data!!)*/
-                    incomeAmount =0 ;
+                    incomeAmount =0.0 ;
                     it.data?.data?.let {
                             it1 -> it1.forEach {
-                              incomeAmount = it.income?.get(0)?.incomeAmount?.plus(incomeAmount) ?: 0
+                              incomeAmount = it.income?.get(0)?.incomeAmount?.plus(incomeAmount) ?: 0.0
                     }
                          }
+
+                    viewModel.FetchExpense(mypref.userid.toString())
+
 
                     btn_Income.setText("Income\n"+"$"+incomeAmount.toString())
                     Log.d("NOTISIZE:", incomeAmount.toString())
@@ -196,6 +208,68 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
                     }
 
                     btn_exp.setText("Expenses\n"+"$"+expenseAmount.toString())
+
+                    total = incomeAmount.plus(expenseAmount)
+
+                    var ipercentage = (incomeAmount / total) * 100
+
+                    Log.d("PER:",ipercentage.toString())
+                    listPie.add(PieEntry(ipercentage.toFloat(), "Income"))
+                    listColors.add(resources.getColor(R.color.pink))
+
+
+                    var Epercentage = (expenseAmount / total) * 100
+
+                    Log.d("PER:",Epercentage.toString())
+                    listPie.add(PieEntry(Epercentage.toFloat(), "Expense"))
+                    listColors.add(resources.getColor(R.color.white))
+
+                    if(incomeAmount > expenseAmount){
+
+                      var balance = incomeAmount.minus(expenseAmount)
+
+                        var Bpercentage = (balance / total) * 100
+
+                        Log.d("PER:",Bpercentage.toString())
+                        listPie.add(PieEntry(Bpercentage.toFloat(), "Balance"))
+                        listColors.add(resources.getColor(R.color.red_btn_bg_color))
+
+                    }
+                    if(incomeAmount < expenseAmount){
+
+                        var balance = expenseAmount.minus(incomeAmount)
+
+                        var Bpercentage = (balance / total) * 100
+
+                        Log.d("PER:",Bpercentage.toString())
+                        listPie.add(PieEntry(Bpercentage.toFloat(), "Balance"))
+                        listColors.add(resources.getColor(R.color.red_btn_bg_color))
+
+                    }
+
+                    val pieDataSet = PieDataSet(listPie, "")
+                    pieDataSet.colors = listColors
+                    pieDataSet.setDrawValues(false);
+
+                    val pieData = PieData(pieDataSet)
+                    //pieData.setValueTextSize(CommonUtils.convertDpToSp(14))
+                    homepiechart.data = pieData
+
+                    homepiechart.setHoleRadius(30f);
+                    homepiechart.setUsePercentValues(true)
+                    homepiechart.legend.isEnabled = false
+                    homepiechart.setDrawEntryLabels(true)
+                    homepiechart.setDrawCenterText(true);
+                    homepiechart.setDrawHoleEnabled(true);
+                    homepiechart.isDrawHoleEnabled = true
+                    homepiechart.description.isEnabled = true
+                    homepiechart.setEntryLabelColor(R.color.white)
+                    homepiechart.setHoleColor(R.color.white);
+                    homepiechart.setEntryLabelTextSize(8f);
+
+                    homepiechart.setTransparentCircleRadius(10f);
+                    homepiechart.animateY(1400, Easing.EaseInOutQuad)
+
 
                 }
                 Status.LOADING -> {
