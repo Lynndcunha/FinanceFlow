@@ -207,6 +207,9 @@ class HomeActivity :BaseActivity(), View.OnClickListener {
 
                     }
 
+                    listPie.clear()
+                    listColors.clear()
+
                     btn_exp.setText("Expenses\n"+"$"+expenseAmount.toString())
 
                     total = incomeAmount.plus(expenseAmount)
