@@ -71,6 +71,39 @@
             android:layout_marginTop="@dimen/custom_size20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Split Type"
+            android:textColor="@color/label"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/text_size12"
+            />
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_above="@+id/view_below" >
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textColor="@color/white"
+                android:text="Equally" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="Custom" />
+        </RadioGroup>
+        <TextView
+            android:layout_marginTop="@dimen/custom_size20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Amount"
             android:textColor="@color/label"
             android:fontFamily="@font/roboto_bold"

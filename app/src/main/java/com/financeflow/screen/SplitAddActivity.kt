@@ -64,6 +64,8 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
      var from :String = ""
      var to :String = ""
     private lateinit var itemList: MutableList<UserData>
+    private lateinit var itemList1: MutableList<UserData>
+
     private var userId1: List<String>? = null
     private lateinit var UserList: MutableList<String>
 
@@ -218,12 +220,13 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
 
     }
 
-    override fun onCheckClick(position: Int, userid: String,ischeck:Boolean) {
+    override fun onCheckClick(position: Int, userid: String,ischeck:Boolean,name:String) {
 
        // userData?.get(position)!!.ischeck = ischeck
 
         if(ischeck){
         UserList.add(userid)
+           // UserList.add()
         }
         else{
             UserList.remove(userid)

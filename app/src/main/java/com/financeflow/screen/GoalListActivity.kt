@@ -2,6 +2,7 @@ package com.financeflow.screen
 
 import CommonViewModel
 import Status
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
@@ -10,10 +11,13 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.financeflow.Interface.OnGoalclick
 import com.financeflow.R
 import com.financeflow.adapter.GoalAdapter
 import com.financeflow.model.GoalDatum
@@ -36,7 +40,7 @@ import java.util.Date
 import java.util.Locale
 
 
-class GoalListActivity : AppCompatActivity() {
+class GoalListActivity : AppCompatActivity(),OnGoalclick {
 
     lateinit var chatAdapter:GoalAdapter
     lateinit var viewModel: CommonViewModel
@@ -65,7 +69,7 @@ class GoalListActivity : AppCompatActivity() {
 
 
         val mLayoutManager = LinearLayoutManager(this)
-        chatAdapter = GoalAdapter(this)
+        chatAdapter = GoalAdapter(this,this)
         mLayoutManager.orientation = LinearLayoutManager.VERTICAL
         recycler_chat.layoutManager = mLayoutManager
         recycler_chat.itemAnimator = DefaultItemAnimator()
@@ -234,6 +238,22 @@ class GoalListActivity : AppCompatActivity() {
         chatAdapter.setList(futureEvents)
         Log.d("SIZE:",futureEvents.size.toString())
         //  adapter.filter(futureEvents)
+    }
+
+    override fun onGoalClick(userid: String) {
+
+        val inputEditTextField = EditText(this)
+        val dialog = AlertDialog.Builder(this)
+            .setTitle("Add Amount")
+            .setMessage("")
+            .setView(inputEditTextField)
+            .setPositiveButton("OK") { _, _ ->
+                val editTextInput = inputEditTextField .text.toString()
+                //Timber.d("editext value is: $editTextInput")
+            }
+            .setNegativeButton("Cancel", null)
+            .create()
+        dialog.show()
     }
 
 }

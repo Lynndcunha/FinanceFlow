@@ -77,12 +77,12 @@ class SplitAdapter(private val c: Context,var onCheckBoxclick: OnCheckBoxclick) 
             if(userId1?.contains(userlist?.get(position)!!.id) == true){
                 userId1.remove(userlist?.get(position)!!.id)
 
-                onCheckBoxclick.onCheckClick(position,userlist!!.get(position).id.toString(),false)
+                onCheckBoxclick.onCheckClick(position,userlist!!.get(position).id.toString(),false,userlist?.get(position)?.fullname.toString())
 
             }
             else{
                 userId1.add(userlist?.get(position)!!.id)
-                onCheckBoxclick.onCheckClick(position,userlist!!.get(position).id.toString(),true)
+                onCheckBoxclick.onCheckClick(position,userlist!!.get(position).id.toString(),true,userlist?.get(position)?.fullname.toString())
 
             }
            /* if(!userlist!![position].isChecked){

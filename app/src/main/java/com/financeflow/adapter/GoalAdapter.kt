@@ -6,17 +6,20 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.financeflow.Interface.OnGoalclick
 import com.financeflow.R
 import com.financeflow.model.GoalDatum
 import com.financeflow.screen.UpdateGoalActivity
 import kotlinx.android.synthetic.main.item_budgetadapter.view.budget
+import kotlinx.android.synthetic.main.item_goaladapter.view.btn_add
 import kotlinx.android.synthetic.main.item_goaladapter.view.budget1
 import java.io.Serializable
 
 
-class GoalAdapter(private val c: Context,) :
+class GoalAdapter(private val c: Context,var goalclick: OnGoalclick) :
     RecyclerView.Adapter<GoalAdapter.BeatsViewHolder>() {
     private var userlist: List<GoalDatum>? = null
     private var userId: Int = 0
@@ -97,6 +100,11 @@ class GoalAdapter(private val c: Context,) :
 
                   }
 
+        holder.mAdd.setOnClickListener {
+
+            goalclick.onGoalClick( userlist?.get(position)?.id.toString())
+        }
+
 
     }
 
@@ -104,6 +112,7 @@ class GoalAdapter(private val c: Context,) :
 
         var mName: TextView
         var mName1: TextView
+        var mAdd: Button
 
         /*var mDate: TextView
          var mDur: TextView
@@ -118,6 +127,7 @@ class GoalAdapter(private val c: Context,) :
 
              mName = v.budget
             mName1 = v.budget1
+            mAdd = v.btn_add
 
 
             /*mDate = v.item_date
