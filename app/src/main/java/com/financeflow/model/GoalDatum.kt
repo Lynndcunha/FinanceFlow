@@ -41,4 +41,8 @@ class GoalDatum : Serializable  {
     @SerializedName("__v")
     @Expose
     var v: Int? = null
+
+    @SerializedName("savedAmount")
+    @Expose
+    var savedAmount: List<SavedAmount>? = null
 }

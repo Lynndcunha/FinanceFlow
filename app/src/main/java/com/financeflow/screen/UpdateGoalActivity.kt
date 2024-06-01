@@ -4,6 +4,7 @@ import CommonViewModel
 import Status
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -25,6 +26,10 @@ import com.financeflow.util.PrefManager
 import com.financeflow.util.ValidationUtils
 import com.financeflow.utils.CustomDialog
 import com.financeflow.utils.NetworkUtil
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.data.PieEntry
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_budget.edtxt_elect
 import kotlinx.android.synthetic.main.activity_budget.edtxt_internet
@@ -36,8 +41,10 @@ import kotlinx.android.synthetic.main.activity_goal.edtxt_date
 import kotlinx.android.synthetic.main.activity_goal.edtxt_desc
 import kotlinx.android.synthetic.main.activity_goal.edtxt_amount
 import kotlinx.android.synthetic.main.activity_goal.edtxt_source
+import kotlinx.android.synthetic.main.activity_goal.piechart1
 import kotlinx.android.synthetic.main.activity_goal.txt_back
 import java.text.SimpleDateFormat
+import java.util.ArrayList
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
@@ -56,6 +63,9 @@ class UpdateGoalActivity : BaseActivity(), View.OnClickListener {
     private val calendar = Calendar.getInstance()
     lateinit var filterDataModel : GoalDatum
     lateinit var id : String
+    val listPie = ArrayList<BarEntry>()
+    lateinit var barData: BarData
+    lateinit var barDataSet: BarDataSet
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,6 +79,7 @@ class UpdateGoalActivity : BaseActivity(), View.OnClickListener {
 
 
         }
+
         mypref = PrefManager(this)
         dialog = CustomDialog(this)
         //  dialog.hidSystemUI()
@@ -100,6 +111,41 @@ class UpdateGoalActivity : BaseActivity(), View.OnClickListener {
             showDatePicker()
 
         }
+        var i = 0
+
+        filterDataModel.savedAmount?.forEach {
+
+            i += 1
+
+            listPie.add(BarEntry(i.toFloat(), it.amount!!.toFloat()))
+
+        }
+
+
+
+        if(listPie.size > 0) {
+
+
+            barDataSet = BarDataSet(listPie, "Bar Chart Data")
+
+            // on below line we are initializing our bar data
+            barData = BarData(barDataSet)
+
+            // on below line we are setting data to our bar chart
+            piechart1.data = barData
+
+            // on below line we are setting colors for our bar chart text
+            barDataSet.valueTextColor = Color.WHITE
+
+            // on below line we are setting color for our bar data set
+            barDataSet.setColor(resources.getColor(R.color.purple_200))
+
+            // on below line we are setting text size
+            barDataSet.valueTextSize = 16f
+
+            // on below line we are enabling description as false
+            piechart1.description.isEnabled = false
+        }
 
         filterDataModel.name?.let {
             edtxt_source.setText(filterDataModel.name.toString())
@@ -112,7 +158,7 @@ class UpdateGoalActivity : BaseActivity(), View.OnClickListener {
 
         filterDataModel.date?.let {
 
-            edtxt_date.setText(filterDataModel.date.toString())
+            edtxt_date.setText(filterDataModel.date.toString().split("T")[0])
             date= filterDataModel.date.toString()
 
         }
