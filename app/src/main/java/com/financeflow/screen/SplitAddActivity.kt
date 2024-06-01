@@ -10,6 +10,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
@@ -19,16 +20,19 @@ import com.financeflow.Interface.OnCheckBoxclick
 import com.financeflow.R
 import com.financeflow.adapter.GoalAdapter
 import com.financeflow.adapter.SplitAdapter
+import com.financeflow.adapter.SplitAdapter1
 import com.financeflow.model.CreatetransactionReqModel
 import com.financeflow.model.ExpenseReqModel
 import com.financeflow.model.GoalDatum
 import com.financeflow.model.IData
 import com.financeflow.model.UserData
+import com.financeflow.model.UserData1
 import com.financeflow.model.UserDatum
 import com.financeflow.util.PrefManager
 import com.financeflow.utils.CustomDialog
 import com.financeflow.utils.NetworkUtil
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_expense.edtxt_amount
 import kotlinx.android.synthetic.main.activity_expense.edtxt_source
 import kotlinx.android.synthetic.main.budget_list.recycler_chat
@@ -38,12 +42,16 @@ import kotlinx.android.synthetic.main.goal_list.to_date
 import kotlinx.android.synthetic.main.income_list.btn_add
 import kotlinx.android.synthetic.main.income_list.edtxt_search
 import kotlinx.android.synthetic.main.income_list.txt_back
+import kotlinx.android.synthetic.main.split_add.btn_add_friend
 import kotlinx.android.synthetic.main.split_add.btn_split_save
 import kotlinx.android.synthetic.main.split_add.edtxts_amount
 import kotlinx.android.synthetic.main.split_add.edtxts_source
+import kotlinx.android.synthetic.main.split_add.radio1
+import kotlinx.android.synthetic.main.split_add.radio2
 import kotlinx.android.synthetic.main.split_add.recycler_split
 import java.text.ParseException
 import java.text.SimpleDateFormat
+import java.util.ArrayList
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
@@ -51,12 +59,12 @@ import java.util.Locale
 
 class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
 
-    lateinit var chatAdapter:SplitAdapter
+    lateinit var chatAdapter: SplitAdapter1
     lateinit var viewModel: CommonViewModel
     lateinit var dialog: CustomDialog
     lateinit var mypref: PrefManager
     lateinit var albumid :String
-    lateinit var gson : Gson
+    private val gson = Gson()
     var mobile : String = "9769363545"
     lateinit var  date: String
     private val calendar = Calendar.getInstance()
@@ -64,10 +72,15 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
      var from :String = ""
      var to :String = ""
     private lateinit var itemList: MutableList<UserData>
-    private lateinit var itemList1: MutableList<UserData>
+    private lateinit var itemList1: MutableList<UserData1>
 
     private var userId1: List<String>? = null
     private lateinit var UserList: MutableList<String>
+    private lateinit var FriendList: MutableList<UserData1>
+    var retrievedList: List<UserData1>? = null
+
+    var equally : String = ""
+    var custom : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,17 +94,25 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
         date = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Date())
         itemList = mutableListOf()
         UserList = mutableListOf()
+        FriendList = mutableListOf()
 
 
 
         val mLayoutManager = LinearLayoutManager(this)
-        chatAdapter = SplitAdapter(this,this)
+        chatAdapter = SplitAdapter1(this,this)
         mLayoutManager.orientation = LinearLayoutManager.VERTICAL
         recycler_split.layoutManager = mLayoutManager
         recycler_split.itemAnimator = DefaultItemAnimator()
         recycler_split.adapter = chatAdapter
 
 
+        radio1.setOnClickListener {
+            custom = false
+        }
+
+        radio2.setOnClickListener {
+            custom = true
+        }
 
         txt_back.setOnClickListener {
 
@@ -101,25 +122,28 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
         setupViewModel()
         setupObserver()
 
+        btn_add_friend.setOnClickListener {
+
+            val intent = Intent(this, SplitUserActivity::class.java)
+            startActivity(intent)
+        }
 
         btn_split_save.setOnClickListener {
 
-            if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
-
+            if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0)
+            {
                 if(UserList.size > 0) {
                     val signupReqModel = CreatetransactionReqModel(
                         edtxts_amount.text.toString(),
                         edtxts_source.text.toString(),
                         UserList,
                         mypref.userid.toString(),
-
+                        custom
                         )
-
                     viewModel.SaveTransaction(signupReqModel)
                 }
                 else{
                     Toast.makeText(this, "please select user", Toast.LENGTH_LONG).show()
-
                 }
             } else {
 
@@ -138,15 +162,35 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
 
     override fun onStart() {
         super.onStart()
-        if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
+
+        var  list = mypref.friendlsit
+
+        if(list != "0") {
+            val typeToken = object : TypeToken<List<UserData1>>() {}
+
+             retrievedList = getArrayList(typeToken)
+
+            //var FriendList = list as ArrayList<*>
+
+            Log.d("LISP", retrievedList!!.size.toString())
+            retrievedList?.let { it2 -> chatAdapter.setList(it2) }
+
+
+        }
+       /* if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0) {
 
             viewModel.FetchUserlist()
 
         }
         else{
             dialog.warningDialog()
-        }
+        }*/
 
+    }
+
+    fun <T> getArrayList(typeToken: TypeToken<List<T>>): List<T>? {
+        val json = mypref.friendlsit ?: return null
+        return gson.fromJson(json, typeToken.type)
     }
 
     fun setupViewModel() {
@@ -171,7 +215,6 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
                             itemList.add(UserData(it.id!!,it.fullName!!,it.email!!,false))
 
                         }
-                        chatAdapter.setList(itemList!!)
                     }
 
                 }
@@ -226,10 +269,12 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
 
         if(ischeck){
         UserList.add(userid)
-           // UserList.add()
+            FriendList.add(UserData1(userid,name,false))
         }
         else{
             UserList.remove(userid)
+            FriendList.remove(UserData1(userid,name,false))
+
         }
 
     }

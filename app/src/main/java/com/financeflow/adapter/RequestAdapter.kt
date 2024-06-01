@@ -16,6 +16,7 @@ import com.financeflow.model.PDatum
 import com.financeflow.screen.UpdateGoalActivity
 import kotlinx.android.synthetic.main.item_budgetadapter.view.budget
 import kotlinx.android.synthetic.main.item_goaladapter.view.budget1
+import kotlinx.android.synthetic.main.item_requestadapter.view.btn_cancel
 import kotlinx.android.synthetic.main.item_requestadapter.view.btn_pay
 import kotlinx.android.synthetic.main.item_requestadapter.view.titleamount
 import kotlinx.android.synthetic.main.item_requestadapter.view.titleby
@@ -103,6 +104,11 @@ class RequestAdapter(private val c: Context,var onPayclick: OnPayclick) :
 
                   }
 
+        holder.mPAyCancel.setOnClickListener {
+
+            onPayclick.onCancelClick(userlist?.get(position)?.id.toString())
+
+        }
 
     }
 
@@ -113,6 +119,7 @@ class RequestAdapter(private val c: Context,var onPayclick: OnPayclick) :
         var mNameDate: TextView
         var mNamBy: TextView
         var mPAy: Button
+        var mPAyCancel: Button
 
         /*var mDate: TextView
          var mDur: TextView
@@ -126,6 +133,7 @@ class RequestAdapter(private val c: Context,var onPayclick: OnPayclick) :
             mNameDate = v.titledate
             mNamBy = v.titleby
             mPAy = v.btn_pay
+            mPAyCancel = v.btn_cancel
 
            /*  mName = v.budget
             mName1 = v.budget1*/

@@ -18,6 +18,7 @@ class PrefManager(context: Context) {
     val MYINT= "interest"
     val CAPINT= "capint"
     val USERID= "userid"
+    val FRIENDLIST= "FriendList"
 
 
     val pref: SharedPreferences = context.getSharedPreferences(PREF_NAME, PRIVATE_MODE)
@@ -26,6 +27,11 @@ class PrefManager(context: Context) {
     var userid: String?
         get() = pref.getString(USERID, "0")
         set(value) = pref.edit().putString(USERID, value).apply()
+
+    var friendlsit: String?
+        get() = pref.getString(FRIENDLIST, "0")
+        set(value) = pref.edit().putString(FRIENDLIST, value).apply()
+
 
     var config: String?
         get() = pref.getString(CONFIG, "")

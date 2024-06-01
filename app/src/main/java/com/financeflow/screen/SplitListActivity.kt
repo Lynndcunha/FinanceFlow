@@ -19,6 +19,7 @@ import com.financeflow.R
 import com.financeflow.adapter.GoalAdapter
 import com.financeflow.adapter.PaidAdapter
 import com.financeflow.adapter.RequestAdapter
+import com.financeflow.model.CanceltransactionReqModel
 import com.financeflow.model.CreatetransactionReqModel
 import com.financeflow.model.GoalDatum
 import com.financeflow.model.IData
@@ -259,6 +260,37 @@ class SplitListActivity : AppCompatActivity(),OnPayclick {
 
         })
 
+
+
+        viewModel.getCancelTrans().observe(this, androidx.lifecycle.Observer {
+
+            when (it.status) {
+
+                Status.SUCCESS -> {
+                    dialog.hideDialog()
+                    /* Glide.with(this).load(it.data!!.data!![0].mainBanner).centerCrop().into(banner1)
+                     competationAdapter.setList(it.data.data!!)*/
+                    viewModel.PendingList(mypref.userid.toString())
+                    viewModel.PaidList(mypref.userid.toString())
+
+
+                }
+                Status.LOADING -> {
+
+                    dialog.showDialog()
+                    //      Toast.makeText(context, "Loading", Toast.LENGTH_LONG).show()
+
+                }
+                Status.ERROR -> {
+                    dialog.hideDialog()
+                    dialog.showToast(it.message.toString())
+
+                }
+            }
+
+        })
+
+
     }
 
     fun futureEvents() {
@@ -304,6 +336,14 @@ class SplitListActivity : AppCompatActivity(),OnPayclick {
         val signupReqModel = SetteltransactionReqModel(userid)
 
         viewModel.SettelTransaction(signupReqModel)
+
+    }
+
+    override fun onCancelClick(userid: String) {
+
+        val signupReqModel = CanceltransactionReqModel(userid)
+
+        viewModel.CancelTransaction(signupReqModel)
 
     }
 

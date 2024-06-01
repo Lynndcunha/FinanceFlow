@@ -18,11 +18,12 @@ data class UpdateBudgetReqModel (var id: String, var rent: String,
                            var grocery: String, var gym: String,
                            var dineOut: String,
                            var savings: String, var subscriptions: String,
-                           var others: String,
-)
+                           var others: String)
 
-
-data class CreatetransactionReqModel (var amount: String, var title: String,var users : List<String>,var userId : String)
-
+data class CreatetransactionReqModel (var amount: String, var title: String,var users : List<String>,var userId : String,var manual : Boolean)
 
 data class SetteltransactionReqModel (var transactionId : String)
+
+data class CanceltransactionReqModel (var id : String)
+
+data class GoalAmountReqModel (var id : String,var amount: String)

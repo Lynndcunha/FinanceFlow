@@ -39,6 +39,8 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     var userlistmodel : MutableLiveData<Resource<UserListesponseModel>> = MutableLiveData()
     var transmodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
     var settelmodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
+    var cancelmodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
+    var goalSavingmodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
 
 
 
@@ -351,6 +353,96 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
             override fun onFailure(call: Call<ExpenseModel>?, t: Throwable?) {
 
                 settelmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun CancelTransaction(signupReqModel: CanceltransactionReqModel){
+
+        cancelmodel.postValue(Resource.loading(null))
+
+        val call: Call<ExpenseModel> = RetrofitBuilder.apiService.CANCELTRAN(signupReqModel)
+        call.enqueue(object : Callback<ExpenseModel> {
+
+            override fun onResponse(call: Call<ExpenseModel>?, response: Response<ExpenseModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        cancelmodel.postValue(Resource.success(response?.body()) as Resource<ExpenseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        cancelmodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        cancelmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        cancelmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ExpenseModel>?, t: Throwable?) {
+
+                cancelmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun GoalamountUpdate(signupReqModel: GoalAmountReqModel){
+
+        goalSavingmodel.postValue(Resource.loading(null))
+
+        val call: Call<ExpenseModel> = RetrofitBuilder.apiService.GOALUPDATE(signupReqModel)
+        call.enqueue(object : Callback<ExpenseModel> {
+
+            override fun onResponse(call: Call<ExpenseModel>?, response: Response<ExpenseModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        goalSavingmodel.postValue(Resource.success(response?.body()) as Resource<ExpenseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        goalSavingmodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        goalSavingmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        goalSavingmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ExpenseModel>?, t: Throwable?) {
+
+                goalSavingmodel.postValue(Resource.error(null,"something went wrong"))
             }
 
         })
@@ -1068,9 +1160,16 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     }
 
 
+    fun getGoalSaving(): LiveData<Resource<ExpenseModel>> {
+        return goalSavingmodel
+    }
 
     fun getSetTrans(): LiveData<Resource<ExpenseModel>> {
         return settelmodel
+    }
+
+    fun getCancelTrans(): LiveData<Resource<ExpenseModel>> {
+        return cancelmodel
     }
     fun getTrans(): LiveData<Resource<ExpenseModel>> {
         return transmodel

@@ -3556,6 +3556,7 @@ id btn_action1
 id btn_action2
 id btn_action3
 id btn_add
+id btn_add_friend
 id btn_budget_save
 id btn_cancel
 id btn_exp
@@ -4154,6 +4155,7 @@ id recycler_chat
 id recycler_paid
 id recycler_request
 id recycler_split
+id recycler_userlist
 id recycler_view_category
 id regenerate_layout
 id regenerate_text
@@ -4758,6 +4760,7 @@ layout goal_list
 layout inapp_image_popup
 layout income_list
 layout item_budgetadapter
+layout item_expencedapter
 layout item_goaladapter
 layout item_layout_order_detail
 layout item_notificationadapter
@@ -4892,6 +4895,7 @@ layout smt_item_loading
 layout smt_layout_action_button
 layout splash
 layout split_add
+layout split_friend
 layout split_list
 layout support_simple_spinner_dropdown_item
 layout test_action_chip

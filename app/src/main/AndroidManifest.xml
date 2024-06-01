@@ -209,6 +209,12 @@
 
             />
 
+        <activity android:name="com.financeflow.screen.SplitUserActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
+
     </application>
 
 </manifest>

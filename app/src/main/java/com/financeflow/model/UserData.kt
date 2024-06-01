@@ -6,4 +6,12 @@ data class UserData(
     val fullname: String,
     val email: String,
     var isChecked: Boolean
+    )
+
+
+data class UserData1(
+    val id: String,
+    val fullname: String,
+    var isChecked: Boolean
+
 )

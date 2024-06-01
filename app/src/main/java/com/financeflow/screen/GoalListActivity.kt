@@ -12,6 +12,7 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.ViewModelProviders
@@ -20,6 +21,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.financeflow.Interface.OnGoalclick
 import com.financeflow.R
 import com.financeflow.adapter.GoalAdapter
+import com.financeflow.model.CanceltransactionReqModel
+import com.financeflow.model.GoalAmountReqModel
 import com.financeflow.model.GoalDatum
 import com.financeflow.model.IData
 import com.financeflow.util.PrefManager
@@ -200,6 +203,37 @@ class GoalListActivity : AppCompatActivity(),OnGoalclick {
 
         })
 
+        viewModel.getGoalSaving().observe(this, androidx.lifecycle.Observer {
+
+            when (it.status) {
+
+                Status.SUCCESS -> {
+                    dialog.hideDialog()
+                    Toast.makeText(this, "Save successfully", Toast.LENGTH_LONG).show()
+                    viewModel.FetchGoal(mypref.userid.toString())
+
+                    /* Glide.with(this).load(it.data!!.data!![0].mainBanner).centerCrop().into(banner1)
+                     competationAdapter.setList(it.data.data!!)*/
+                  //  viewModel.PendingList(mypref.userid.toString())
+                  //  viewModel.PaidList(mypref.userid.toString())
+
+
+                }
+                Status.LOADING -> {
+
+                    dialog.showDialog()
+                    //      Toast.makeText(context, "Loading", Toast.LENGTH_LONG).show()
+
+                }
+                Status.ERROR -> {
+                    dialog.hideDialog()
+                    dialog.showToast(it.message.toString())
+
+                }
+            }
+
+        })
+
     }
 
     fun futureEvents() {
@@ -250,6 +284,11 @@ class GoalListActivity : AppCompatActivity(),OnGoalclick {
             .setPositiveButton("OK") { _, _ ->
                 val editTextInput = inputEditTextField .text.toString()
                 //Timber.d("editext value is: $editTextInput")
+
+                val signupReqModel = GoalAmountReqModel(userid,editTextInput.toString())
+
+                viewModel.GoalamountUpdate(signupReqModel)
+
             }
             .setNegativeButton("Cancel", null)
             .create()

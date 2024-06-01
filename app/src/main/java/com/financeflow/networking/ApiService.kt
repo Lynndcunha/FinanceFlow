@@ -69,6 +69,12 @@ interface ApiService {
     @POST("user/settle-transaction")
     fun SETTELTRAN(@Body signupReqModel: SetteltransactionReqModel): Call<ExpenseModel>
 
+    @POST("user/cancel-transaction")
+    fun CANCELTRAN(@Body signupReqModel: CanceltransactionReqModel): Call<ExpenseModel>
+
+    @POST("user/goal-saving")
+    fun GOALUPDATE(@Body signupReqModel: GoalAmountReqModel): Call<ExpenseModel>
+
     @GET("user/list-expense")
     fun GETEXPENSE(@Query("userId") userId:String ): Call<ExpenseListesponseModel>
 

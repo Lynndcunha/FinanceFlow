@@ -12,8 +12,9 @@ import com.financeflow.R
 import com.financeflow.model.ExpenseDatum
 import com.financeflow.screen.UpdateExpenseActivity
 import com.financeflow.screen.UpdateGoalActivity
-import kotlinx.android.synthetic.main.item_budgetadapter.view.budget
-import kotlinx.android.synthetic.main.item_goaladapter.view.budget1
+import kotlinx.android.synthetic.main.item_expencedapter.view.budget
+import kotlinx.android.synthetic.main.item_expencedapter.view.budget1
+
 import java.io.Serializable
 
 
@@ -30,7 +31,7 @@ class ExpenseAdapter(private val c: Context,) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BeatsViewHolder {
 
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.item_goaladapter, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.item_expencedapter, parent, false)
 
         return BeatsViewHolder(v)
 
