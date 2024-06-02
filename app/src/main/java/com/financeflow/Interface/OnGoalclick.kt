@@ -2,5 +2,5 @@ package  com.financeflow.Interface
 
 interface OnGoalclick {
 
-    fun onGoalClick(userid:String)
+    fun onGoalClick(userid:String,amount:String)
 }

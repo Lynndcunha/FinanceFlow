@@ -102,7 +102,7 @@ class GoalAdapter(private val c: Context,var goalclick: OnGoalclick) :
 
         holder.mAdd.setOnClickListener {
 
-            goalclick.onGoalClick( userlist?.get(position)?.id.toString())
+            goalclick.onGoalClick( userlist?.get(position)?.id.toString(),userlist?.get(position)?.amount.toString())
         }
 
 

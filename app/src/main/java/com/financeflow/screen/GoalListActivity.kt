@@ -274,7 +274,7 @@ class GoalListActivity : AppCompatActivity(),OnGoalclick {
         //  adapter.filter(futureEvents)
     }
 
-    override fun onGoalClick(userid: String) {
+    override fun onGoalClick(userid: String,setAmoount:String) {
 
         val inputEditTextField = EditText(this)
         val dialog = AlertDialog.Builder(this)
@@ -285,10 +285,15 @@ class GoalListActivity : AppCompatActivity(),OnGoalclick {
                 val editTextInput = inputEditTextField .text.toString()
                 //Timber.d("editext value is: $editTextInput")
 
-                val signupReqModel = GoalAmountReqModel(userid,editTextInput.toString())
+                if(editTextInput.toInt() < setAmoount.toInt()) {
+                    val signupReqModel = GoalAmountReqModel(userid, editTextInput.toString())
 
-                viewModel.GoalamountUpdate(signupReqModel)
+                    viewModel.GoalamountUpdate(signupReqModel)
+                }
+                else{
+                    Toast.makeText(this, "Enter amount is grater then set amount", Toast.LENGTH_LONG).show()
 
+                }
             }
             .setNegativeButton("Cancel", null)
             .create()
