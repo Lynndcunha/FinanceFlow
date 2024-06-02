@@ -2,6 +2,7 @@ package com.financeflow.screen
 
 import CommonViewModel
 import Status
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DefaultItemAnimator
@@ -29,6 +31,14 @@ import com.financeflow.util.PrefManager
 import com.financeflow.utils.CustomDialog
 import com.financeflow.utils.NetworkUtil
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import com.stripe.android.ApiResultCallback
+import com.stripe.android.PaymentConfiguration
+import com.stripe.android.PaymentIntentResult
+import com.stripe.android.Stripe
+import com.stripe.android.model.ConfirmPaymentIntentParams
+import com.stripe.android.model.PaymentIntent
+import com.stripe.android.view.CardInputWidget
 import kotlinx.android.synthetic.main.budget_list.recycler_chat
 import kotlinx.android.synthetic.main.goal_list.edtxt_searchg
 import kotlinx.android.synthetic.main.income_list.btn_add
@@ -47,6 +57,13 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
+import com.stripe.android.model.StripeIntent
+import okhttp3.OkHttpClient
+import com.stripe.android.model.PaymentMethodCreateParams
+import okhttp3.*
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import org.json.JSONObject
+import java.io.IOException
 
 
 class SplitListActivity : AppCompatActivity(),OnPayclick {
@@ -65,6 +82,9 @@ class SplitListActivity : AppCompatActivity(),OnPayclick {
     private var goallist: List<GoalDatum>? = null
      var from :String = ""
      var to :String = ""
+    private lateinit var stripe: Stripe
+    private  val REQUEST_CODE = 1001
+    var userid1 :String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,6 +102,10 @@ class SplitListActivity : AppCompatActivity(),OnPayclick {
         val mLayoutManager = LinearLayoutManager(this)
         val mLayoutManager1 = LinearLayoutManager(this)
 
+        PaymentConfiguration.init(
+            applicationContext,
+            "pk_test_51PLTGkDuHl5rdm9s1FhuLIfewmEDKXHlw6gOvXmd4vzMGVl9l14eNWeQaaw4s5rWTmPGbbLqJzCqafZeSY2cUNO300HNUepcsu"
+        )
 
         chatAdapter = RequestAdapter(this,this)
         paidAdapter = PaidAdapter(this)
@@ -137,6 +161,7 @@ class SplitListActivity : AppCompatActivity(),OnPayclick {
 
             viewModel.PendingList(mypref.userid.toString())
             viewModel.PaidList(mypref.userid.toString())
+          //  viewModel.Payment()
 
 //            viewModel.PendingList("662cdf61ac9a14038e5c1f9a")
 //            viewModel.PaidList("662cdf61ac9a14038e5c1f9a")
@@ -243,6 +268,7 @@ class SplitListActivity : AppCompatActivity(),OnPayclick {
                     viewModel.PendingList(mypref.userid.toString())
                     viewModel.PaidList(mypref.userid.toString())
 
+                    userid1 = ""
 
                 }
                 Status.LOADING -> {
@@ -291,6 +317,9 @@ class SplitListActivity : AppCompatActivity(),OnPayclick {
         })
 
 
+
+
+
     }
 
     fun futureEvents() {
@@ -333,11 +362,26 @@ class SplitListActivity : AppCompatActivity(),OnPayclick {
 
     override fun onPayClick(userid: String) {
 
-        val signupReqModel = SetteltransactionReqModel(userid)
+      //  val signupReqModel = SetteltransactionReqModel(userid)
 
-        viewModel.SettelTransaction(signupReqModel)
+      //  viewModel.SettelTransaction(signupReqModel)
+
+
+
+       /* val payButton: Button = findViewById(R.id.payButton)
+        payButton.setOnClickListener {
+            createPaymentIntent()
+        }*/
+
+        userid1 = userid
+        val intent = Intent(this, StripePayment::class.java)
+        startActivityForResult(intent, REQUEST_CODE)
+
+
 
     }
+
+
 
     override fun onCancelClick(userid: String) {
 
@@ -346,5 +390,22 @@ class SplitListActivity : AppCompatActivity(),OnPayclick {
         viewModel.CancelTransaction(signupReqModel)
 
     }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            val result = data?.getStringExtra("resultKey")
+            Toast.makeText(this, "Result: $result", Toast.LENGTH_LONG).show()
+
+            if(result == "success"){
+
+                val signupReqModel = SetteltransactionReqModel(userid1)
+
+                  viewModel.SettelTransaction(signupReqModel)
+            }
+        }
+    }
+
 
 }

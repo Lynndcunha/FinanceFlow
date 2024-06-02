@@ -97,5 +97,10 @@ interface ApiService {
     @GET("user/list")
     fun GETUSERLIST( ): Call<UserListesponseModel>
 
+    @FormUrlEncoded
+    @Headers("Content-Type:application/x-www-form-urlencoded")
+    @POST("payment_intents")
+    fun PAYMENT(@Header("Authorization") token : String,@Field("amount") amount:Int,@Field("currency") currency:String): Call<Any>
+
 }
 

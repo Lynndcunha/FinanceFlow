@@ -8,6 +8,7 @@ import com.financeflow.model.*
 import com.financeflow.networking.RetrofitBuilder
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -41,6 +42,7 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     var settelmodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
     var cancelmodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
     var goalSavingmodel : MutableLiveData<Resource<ExpenseModel>> = MutableLiveData()
+    var paymentModel : MutableLiveData<Resource<String>> = MutableLiveData()
 
 
 
@@ -1160,6 +1162,61 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
     }
 
 
+    fun Payment(){
+
+        paymentModel.postValue(Resource.loading(null))
+
+        val call: Call<Any> = RetrofitBuilder.apiService1.PAYMENT("Bearer sk_test_51PLTGkDuHl5rdm9slmfjNB3fy5O8XGLEpjCIy9HKzMgm29t9VXPMREKXYByrmvNeYWX2Gb70qfDoBxKQ2WwGHKIe00xlhxbUQq",1000,"USD")
+        call.enqueue(object : Callback<Any> {
+
+            override fun onResponse(call: Call<Any>?, response: Response<Any>?) {
+
+                val responseData = response?.body().toString()
+                val json = JSONObject(responseData)
+                val clientSecret = json.getString("client_secret")
+                Log.d("RES:",clientSecret)
+
+
+                paymentModel.postValue(Resource.success(clientSecret) as Resource<String>?)
+
+
+                /*if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        verifymodel.postValue(Resource.success(response?.body()) as Resource<VerifyotpModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        verifymodel.postValue(Resource.error(null, response.body()!!.message.toString()))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        verifymodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        verifymodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }*/
+            }
+
+            override fun onFailure(call: Call<Any>?, t: Throwable?) {
+
+                paymentModel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
+
+
+    fun getPayment(): LiveData<Resource<String>> {
+        return paymentModel
+    }
     fun getGoalSaving(): LiveData<Resource<ExpenseModel>> {
         return goalSavingmodel
     }

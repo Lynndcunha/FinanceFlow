@@ -4,7 +4,7 @@
             "outputFile": "/Users/admin/AndroidStudioProjects/FinanceFlow/financeFlow/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/41a6f8c916c29f8cf2bf7fa1dea2278e/appcompat-1.3.1/res/values-v16/values-v16.xml",
+                    "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/ae932489aac06cdc3ffaa6b63987ca18/appcompat-1.4.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/337ae6ca1e6e46b67b6d8be1b05ec956/core-1.6.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/admin/.gradle/caches/transforms-2/files-2.1/bc7e8dd578f101d54aaa8c1e4f4cd584/core-1.7.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

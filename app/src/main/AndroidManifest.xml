@@ -215,6 +215,11 @@
 
             />
 
+        <activity android:name="com.financeflow.screen.StripePayment"
+            android:screenOrientation="portrait"
+            android:exported="true"
+
+            />
     </application>
 
 </manifest>

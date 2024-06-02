@@ -18,6 +18,7 @@ class Myapp : Application(), LifeCycleDelegate {
 
     companion object {
         var BASE_URL: String = "http://54.91.6.130:8080/api/v1/"
+        var BASE_URL1: String = "https://api.stripe.com/v1/"
 
         lateinit var instance: Myapp
         // private set
