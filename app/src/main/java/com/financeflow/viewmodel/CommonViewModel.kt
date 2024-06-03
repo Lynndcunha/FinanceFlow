@@ -316,6 +316,49 @@ class CommonViewModel (application: Application) : AndroidViewModel(application)
 
     }
 
+    fun SaveCustomTransaction(signupReqModel: CreatetransactionReqModel1){
+
+        transmodel.postValue(Resource.loading(null))
+
+        val call: Call<ExpenseModel> = RetrofitBuilder.apiService.SAVETRANCUSTOM(signupReqModel)
+        call.enqueue(object : Callback<ExpenseModel> {
+
+            override fun onResponse(call: Call<ExpenseModel>?, response: Response<ExpenseModel>?) {
+
+                Log.d("RESP:",response?.code().toString())
+
+                if(response!!.isSuccessful) {
+
+                    if(response.body()!!.status == true) {
+                        transmodel.postValue(Resource.success(response?.body()) as Resource<ExpenseModel>?)
+
+                    }
+
+                    if(response.body()!!.status == false) {
+                        transmodel.postValue(Resource.error(null, "Error"))
+                    }
+
+                }
+                else{
+                    if(response.code().equals(500)){
+                        transmodel.postValue(Resource.error(null,"Internal Server Error"))
+
+                    }
+                    else {
+
+                        transmodel.postValue(Resource.error(null, "something went wrong"))
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<ExpenseModel>?, t: Throwable?) {
+
+                transmodel.postValue(Resource.error(null,"something went wrong"))
+            }
+
+        })
+
+    }
 
     fun SettelTransaction(signupReqModel: SetteltransactionReqModel){
 

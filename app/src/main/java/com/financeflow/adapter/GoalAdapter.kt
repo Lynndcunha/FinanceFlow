@@ -101,8 +101,11 @@ class GoalAdapter(private val c: Context,var goalclick: OnGoalclick) :
                   }
 
         holder.mAdd.setOnClickListener {
-
-            goalclick.onGoalClick( userlist?.get(position)?.id.toString(),userlist?.get(position)?.amount.toString())
+            var totalamount : Int = 0
+            userlist?.get(position)?.savedAmount?.forEach {
+                totalamount = it.amount?.plus(totalamount) ?: 0
+            }
+            goalclick.onGoalClick( userlist?.get(position)?.id.toString(),userlist?.get(position)?.amount.toString(),totalamount)
         }
 
 

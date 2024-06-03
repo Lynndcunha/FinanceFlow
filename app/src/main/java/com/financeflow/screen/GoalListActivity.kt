@@ -274,30 +274,78 @@ class GoalListActivity : AppCompatActivity(),OnGoalclick {
         //  adapter.filter(futureEvents)
     }
 
-    override fun onGoalClick(userid: String,setAmoount:String) {
+    override fun onGoalClick(userid: String,setAmoount:String,totalamount:Int) {
 
-        val inputEditTextField = EditText(this)
-        val dialog = AlertDialog.Builder(this)
-            .setTitle("Add Amount")
-            .setMessage("")
-            .setView(inputEditTextField)
-            .setPositiveButton("OK") { _, _ ->
-                val editTextInput = inputEditTextField .text.toString()
-                //Timber.d("editext value is: $editTextInput")
+        if (totalamount >= setAmoount.toInt()) {
+            Toast.makeText(
+                this,
+                "Your goal amount achieved",
+                Toast.LENGTH_LONG
+            ).show()
 
-                if(editTextInput.toInt() < setAmoount.toInt()) {
-                    val signupReqModel = GoalAmountReqModel(userid, editTextInput.toString())
+        } else {
 
-                    viewModel.GoalamountUpdate(signupReqModel)
-                }
-                else{
-                    Toast.makeText(this, "Enter amount is grater then set amount", Toast.LENGTH_LONG).show()
+            if (totalamount == 0) {
+                val inputEditTextField = EditText(this)
+                val dialog = AlertDialog.Builder(this)
+                    .setTitle("Add Amount")
+                    .setMessage("")
+                    .setView(inputEditTextField)
+                    .setPositiveButton("OK") { _, _ ->
+                        val editTextInput = inputEditTextField.text.toString()
+                        //Timber.d("editext value is: $editTextInput")
 
-                }
+                        if (editTextInput.toInt() < setAmoount.toInt()) {
+                            val signupReqModel =
+                                GoalAmountReqModel(userid, editTextInput.toString())
+
+                            viewModel.GoalamountUpdate(signupReqModel)
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "Enter amount is grater then set amount",
+                                Toast.LENGTH_LONG
+                            ).show()
+
+                        }
+                    }
+                    .setNegativeButton("Cancel", null)
+                    .create()
+                dialog.show()
             }
-            .setNegativeButton("Cancel", null)
-            .create()
-        dialog.show()
+            else
+            {
+                var save = setAmoount.toInt() - totalamount
+                val inputEditTextField = EditText(this)
+                val dialog = AlertDialog.Builder(this)
+                    .setTitle("Add Amount")
+                    .setMessage("")
+                    .setView(inputEditTextField)
+                    .setPositiveButton("OK") { _, _ ->
+                        val editTextInput = inputEditTextField.text.toString()
+                        //Timber.d("editext value is: $editTextInput")
+
+                        if (editTextInput.toInt() <= save) {
+                            val signupReqModel =
+                                GoalAmountReqModel(userid, editTextInput.toString())
+
+                            viewModel.GoalamountUpdate(signupReqModel)
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "please Enter amount less then or $save",
+                                Toast.LENGTH_LONG
+                            ).show()
+
+                        }
+                    }
+                    .setNegativeButton("Cancel", null)
+                    .create()
+                dialog.show()
+
+
+            }
+        }
     }
 
 }

@@ -22,6 +22,8 @@ import com.financeflow.adapter.GoalAdapter
 import com.financeflow.adapter.SplitAdapter
 import com.financeflow.adapter.SplitAdapter1
 import com.financeflow.model.CreatetransactionReqModel
+import com.financeflow.model.CreatetransactionReqModel1
+import com.financeflow.model.CustomeAmountReqModel
 import com.financeflow.model.ExpenseReqModel
 import com.financeflow.model.GoalDatum
 import com.financeflow.model.IData
@@ -78,6 +80,7 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
     private lateinit var UserList: MutableList<String>
     private lateinit var FriendList: MutableList<UserData1>
     var retrievedList: List<UserData1>? = null
+    private lateinit var UserListCustom: MutableList<CustomeAmountReqModel>
 
     var equally : String = ""
     var custom : Boolean = false
@@ -95,6 +98,7 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
         itemList = mutableListOf()
         UserList = mutableListOf()
         FriendList = mutableListOf()
+        UserListCustom = mutableListOf()
 
 
 
@@ -130,17 +134,34 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
 
         btn_split_save.setOnClickListener {
 
+            UserListCustom.clear()
             if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0)
             {
                 if(UserList.size > 0) {
-                    val signupReqModel = CreatetransactionReqModel(
-                        edtxts_amount.text.toString(),
-                        edtxts_source.text.toString(),
-                        UserList,
-                        mypref.userid.toString(),
-                        custom
+
+                    UserList.forEach {
+                        UserListCustom.add(CustomeAmountReqModel(it,edtxts_amount.text.toString()))
+                    }
+                    if(custom){
+                        val signupReqModel = CreatetransactionReqModel1(
+                            edtxts_amount.text.toString(),
+                            edtxts_source.text.toString(),
+                            UserListCustom,
+                            mypref.userid.toString(),
+                            custom
                         )
-                    viewModel.SaveTransaction(signupReqModel)
+                        viewModel.SaveCustomTransaction(signupReqModel)
+                    }
+                    else {
+                        val signupReqModel = CreatetransactionReqModel(
+                            edtxts_amount.text.toString(),
+                            edtxts_source.text.toString(),
+                            UserList,
+                            mypref.userid.toString(),
+                            custom
+                        )
+                        viewModel.SaveTransaction(signupReqModel)
+                    }
                 }
                 else{
                     Toast.makeText(this, "please select user", Toast.LENGTH_LONG).show()

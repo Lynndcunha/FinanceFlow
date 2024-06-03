@@ -66,6 +66,9 @@ interface ApiService {
     @POST("user/create-transaction")
     fun SAVETRAN(@Body signupReqModel: CreatetransactionReqModel): Call<ExpenseModel>
 
+    @POST("user/create-transaction")
+    fun SAVETRANCUSTOM(@Body signupReqModel: CreatetransactionReqModel1): Call<ExpenseModel>
+
     @POST("user/settle-transaction")
     fun SETTELTRAN(@Body signupReqModel: SetteltransactionReqModel): Call<ExpenseModel>
 
