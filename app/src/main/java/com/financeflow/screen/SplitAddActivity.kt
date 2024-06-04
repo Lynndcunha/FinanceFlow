@@ -135,6 +135,7 @@ class SplitAddActivity : AppCompatActivity(),OnCheckBoxclick {
         btn_split_save.setOnClickListener {
 
             UserListCustom.clear()
+
             if (NetworkUtil.getConnectivityStatus(this.getApplicationContext()) != 0)
             {
                 if(UserList.size > 0) {

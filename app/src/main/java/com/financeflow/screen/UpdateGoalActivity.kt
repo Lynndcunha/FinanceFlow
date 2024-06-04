@@ -15,40 +15,30 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProviders
 import com.financeflow.R
 import com.financeflow.base.BaseActivity
-import com.financeflow.model.BudgetData
-import com.financeflow.model.BudgetReqModel
 import com.financeflow.model.GoalDatum
-import com.financeflow.model.GoalReqModel
 import com.financeflow.model.GoalUpdateReqModel
-import com.financeflow.model.IncomeReqModel
-import com.financeflow.model.IncomeReqModelList
 import com.financeflow.util.PrefManager
 import com.financeflow.util.ValidationUtils
 import com.financeflow.utils.CustomDialog
 import com.financeflow.utils.NetworkUtil
+import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
-import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_budget.edtxt_elect
-import kotlinx.android.synthetic.main.activity_budget.edtxt_internet
-import kotlinx.android.synthetic.main.activity_budget.edtxt_phone
-import kotlinx.android.synthetic.main.activity_budget.edtxt_rent
 import kotlinx.android.synthetic.main.activity_goal.btn_budget_save
-
+import kotlinx.android.synthetic.main.activity_goal.edtxt_amount
 import kotlinx.android.synthetic.main.activity_goal.edtxt_date
 import kotlinx.android.synthetic.main.activity_goal.edtxt_desc
-import kotlinx.android.synthetic.main.activity_goal.edtxt_amount
 import kotlinx.android.synthetic.main.activity_goal.edtxt_source
 import kotlinx.android.synthetic.main.activity_goal.piechart1
 import kotlinx.android.synthetic.main.activity_goal.txt_back
+import java.text.DecimalFormat
 import java.text.SimpleDateFormat
-import java.util.ArrayList
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
-import javax.xml.datatype.DatatypeConstants.MONTHS
 
 
 class UpdateGoalActivity : BaseActivity(), View.OnClickListener {
@@ -66,6 +56,7 @@ class UpdateGoalActivity : BaseActivity(), View.OnClickListener {
     val listPie = ArrayList<BarEntry>()
     lateinit var barData: BarData
     lateinit var barDataSet: BarDataSet
+    val listPie1 = ArrayList<String>()
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -117,13 +108,36 @@ class UpdateGoalActivity : BaseActivity(), View.OnClickListener {
 
             i += 1
 
-            listPie.add(BarEntry(i.toFloat(), it.amount!!.toFloat()))
+            listPie.add(BarEntry(i.toFloat(), it.amount!!.toFloat(),"30%"))
+
+        }
+
+        var amount1 : Double = 0.0
+        listPie1.add("dummy")
+
+        filterDataModel.savedAmount?.forEach {
+
+             amount1 += it.amount!!.toDouble()
+
+            Log.d("AMT:", it.amount!!.toDouble().toString())
+            Log.d("AMT1:", filterDataModel.amount?.toDouble().toString())
+
+            var Epercentage = (amount1 / filterDataModel.amount!!.toDouble()) * 100
+
+            Log.d("AMT3:",Epercentage.toString())
+
+            val df = DecimalFormat("#.##")
+
+            listPie1.add(df.format(Epercentage).toString()+"%")
+
 
         }
 
 
 
+
         if(listPie.size > 0) {
+
 
 
             barDataSet = BarDataSet(listPie, "Bar Chart Data")
@@ -133,6 +147,16 @@ class UpdateGoalActivity : BaseActivity(), View.OnClickListener {
 
             // on below line we are setting data to our bar chart
             piechart1.data = barData
+
+            val labels = arrayOf(
+                "Dummy", "Jan", "Feb", "March", "April", "May",
+                "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"
+            )
+            val xAxis: XAxis = piechart1.getXAxis()
+            xAxis.granularity = 1f
+            xAxis.isGranularityEnabled = true
+            xAxis.valueFormatter = IndexAxisValueFormatter(listPie1)
+            xAxis.textColor = Color.WHITE
 
             // on below line we are setting colors for our bar chart text
             barDataSet.valueTextColor = Color.WHITE
